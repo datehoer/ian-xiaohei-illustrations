@@ -106,6 +106,8 @@ Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中�
 
 这些图片是风格校准样例，不是构图模板。使用时应该从当前文章重新发明隐喻，不要照抄旧案例的物件和构图。
 
+根目录的 `examples/images/` 展示 8 张适合在 GitHub README 里快速浏览的代表样例。安装到 Codex 的 `ian-xiaohei-illustrations/assets/examples/` 内置 14 张校准图，供 agent 在用户明确要求看示例或复刻某张图时低频参考。
+
 ---
 
 ## 安装
@@ -129,6 +131,16 @@ cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```text
 Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑怪诞正文配图。
 ```
+
+### 维护验证
+
+修改 skill 结构、README 图片或校准资产后，可以运行：
+
+```bash
+python3 scripts/quick_validate.py .
+```
+
+这个脚本只检查可机械判断的结构问题；风格、隐喻和小黑参与感仍然需要人工或生成后 QA 判断。
 
 ---
 
@@ -191,6 +203,7 @@ Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流�
 ```text
 .
 ├── README.md
+├── CHANGELOG.md
 ├── LICENSE
 ├── NOTICE.md
 ├── assets/
@@ -201,12 +214,14 @@ Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流�
 │   │   ├── 02-sort-by-purpose.png
 │   │   └── ...
 │   └── prompts.md
+├── scripts/
+│   └── quick_validate.py
 └── ian-xiaohei-illustrations/
     ├── SKILL.md
     ├── agents/
     │   └── openai.yaml
     ├── assets/
-    │   └── examples/
+    │   └── examples/        # 14 张内置校准图
     └── references/
         ├── style-dna.md
         ├── xiaohei-ip.md
@@ -222,6 +237,8 @@ ian-xiaohei-illustrations/
 ```
 
 根目录的 README、LICENSE、NOTICE 和 examples 是 GitHub 分享文档。
+
+`CHANGELOG.md` 和 `scripts/quick_validate.py` 用于维护和发布检查，不需要复制进 Codex skills 目录。
 
 ---
 

@@ -22,6 +22,16 @@ description: 生成 Ian 风格的中文正文配图。用于用户要求为中�
 - `references/qa-checklist.md`：生成后检查和迭代规则。
 - `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
 
+## 任务路由
+
+| 用户任务 | 必读参考 | 输出方式 |
+| --- | --- | --- |
+| 只做配图规划、shot list、文章哪里值得配图 | `references/style-dna.md`, `references/xiaohei-ip.md`, `references/composition-patterns.md` | 先输出 4-8 张 shot list，不调用图像模型。 |
+| 为文章或多个主题生成图片 | `references/style-dna.md`, `references/xiaohei-ip.md`, `references/composition-patterns.md`, `references/prompt-template.md`, `references/qa-checklist.md` | 每张图单独调用 `image_gen`，生成后按 QA 检查。 |
+| 为单个观点、概念或段落生成一张图 | `references/style-dna.md`, `references/xiaohei-ip.md`, `references/composition-patterns.md`, `references/prompt-template.md`, `references/qa-checklist.md` | 只生成一张 16:9 正文配图，避免过度解释。 |
+| 编辑已有图片、去标题、减少错字、增强小黑参与感 | `references/prompt-template.md`, `references/qa-checklist.md` | 优先局部编辑；如果错字或风格漂移严重，再重生成。 |
+| 用户明确要求看示例或复刻某张图 | `assets/examples/`, `references/composition-patterns.md` | 只把示例当风格校准；除非用户要求复刻，否则换新隐喻。 |
+
 ## 工作流
 
 ### 1. 消化正文

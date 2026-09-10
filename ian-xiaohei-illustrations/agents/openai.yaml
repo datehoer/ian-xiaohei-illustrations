@@ -1,6 +1,6 @@
 interface:
-  display_name: "Ian 小黑配图"
-  short_description: "为中文文章生成怪诞清爽、有小黑IP的正文配图资产"
-  default_prompt: "Use $ian-xiaohei-illustrations to 为这篇中文文章设计并生成几张小黑怪诞正文配图。"
+  display_name: "口播手绘配图 · 柯基版"
+  short_description: "设计可替换主角与中文口播分镜，生成带解释性引线标注的手绘配图"
+  default_prompt: "Use $ian-xiaohei-illustrations 为这段口播生成一组配图，沿用极简线描柯基，并添加必要的解释性引线标注。"
 policy:
   allow_implicit_invocation: true

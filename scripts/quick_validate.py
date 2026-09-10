@@ -8,6 +8,7 @@ import re
 import struct
 import sys
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 
 SKILL_DIR = "ian-xiaohei-illustrations"
@@ -19,8 +20,15 @@ REQUIRED_SKILL_FILES = [
     "references/composition-patterns.md",
     "references/prompt-template.md",
     "references/qa-checklist.md",
+    "references/character-design.md",
+    "references/annotations.md",
+    "references/characters/corgi-minimal.md",
+    "LICENSE",
+    "EARTH-LICENSE",
+    "NOTICE.md",
 ]
 README_IMAGE_PATTERN = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+MARKDOWN_LINK_PATTERN = re.compile(r"!?\[[^\]\n]*\]\(([^)\n]+)\)")
 DRAFT_MARKERS = (
     "TODO",
     "FIXME",
@@ -56,6 +64,8 @@ class Validator:
         self.validate_skill_frontmatter_and_routing()
         self.validate_readme_images()
         self.validate_example_images()
+        self.validate_character_image()
+        self.validate_local_links()
         self.validate_changelog()
         self.validate_no_draft_markers()
 
@@ -88,7 +98,7 @@ class Validator:
         self.check("name: ian-xiaohei-illustrations" in text, "SKILL.md frontmatter missing expected name")
         self.check("description:" in text, "SKILL.md frontmatter missing description")
         self.check("## 任务路由" in text, "SKILL.md should include task routing")
-        for reference in REQUIRED_SKILL_FILES[2:]:
+        for reference in (item for item in REQUIRED_SKILL_FILES if item.startswith("references/")):
             self.check(reference in text, f"SKILL.md routing missing {reference}")
 
     def validate_readme_images(self) -> None:
@@ -110,12 +120,50 @@ class Validator:
         for image_dir in image_dirs:
             self.check(image_dir.is_dir(), f"missing example image directory: {relative_to_root(self.root, image_dir)}")
             for path in sorted(image_dir.glob("*.png")):
-                width, height = read_png_size(path)
+                size = self.checked_png_size(path)
+                if size is None:
+                    continue
+                width, height = size
                 ratio = width / height
                 self.check(
                     abs(ratio - (16 / 9)) < 0.015,
                     f"example image is not close to 16:9: {relative_to_root(self.root, path)} ({width}x{height})",
                 )
+
+    def validate_character_image(self) -> None:
+        path = self.require_file(f"{SKILL_DIR}/assets/characters/corgi-minimal.png")
+        if path.is_file():
+            self.checked_png_size(path)
+
+    def checked_png_size(self, path: Path) -> tuple[int, int] | None:
+        try:
+            return read_png_size(path)
+        except (OSError, ValueError, struct.error) as error:
+            self.errors.append(f"invalid PNG: {relative_to_root(self.root, path)} ({error})")
+            return None
+
+    def validate_local_links(self) -> None:
+        skill_root = (self.root / SKILL_DIR).resolve()
+        for path in sorted(self.root.rglob("*.md")):
+            if ".git" in path.parts:
+                continue
+            for raw_target in MARKDOWN_LINK_PATTERN.findall(read_text(path)):
+                # Inline links, including optional Markdown titles and angle brackets.
+                raw_target = raw_target.strip()
+                if not raw_target:
+                    continue
+                target = raw_target.split(">", 1)[0][1:] if raw_target.startswith("<") else raw_target.split()[0]
+                parsed = urlsplit(target)
+                if parsed.scheme or parsed.netloc or not parsed.path:
+                    continue
+                destination = (path.parent / unquote(parsed.path)).resolve()
+                location = relative_to_root(self.root, path)
+                self.check(destination.exists(), f"local link target missing in {location}: {target}")
+                if path.resolve().is_relative_to(skill_root):
+                    self.check(
+                        destination.is_relative_to(skill_root),
+                        f"installed skill link leaves its bundle in {location}: {target}",
+                    )
 
     def validate_changelog(self) -> None:
         changelog = read_text(self.require_file("CHANGELOG.md"))
@@ -137,7 +185,7 @@ class Validator:
 
 
 def read_text(path: Path) -> str:
-    return path.read_text(encoding="utf-8")
+    return path.read_text(encoding="utf-8") if path.is_file() else ""
 
 
 def read_png_size(path: Path) -> tuple[int, int]:
@@ -150,6 +198,8 @@ def read_png_size(path: Path) -> tuple[int, int]:
         if chunk_type != b"IHDR" or length < 8:
             raise ValueError(f"missing PNG IHDR: {path}")
         width, height = struct.unpack(">II", handle.read(8))
+        if width == 0 or height == 0:
+            raise ValueError("PNG dimensions must be positive")
         return width, height
 
 

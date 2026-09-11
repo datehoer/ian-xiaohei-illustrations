@@ -1,0 +1,7 @@
+{
+  "source": "../laundromat-v2/short.json",
+  "source_narration": "outputs/laundromat-v2/short/narration.wav",
+  "sha256": "406967894f5a520e83c84886053edc1b34bf4d53f68243168b1c2eae283e62c8",
+  "changes": "visuals only; same narration, captions, ledger and block timings",
+  "cut_source": "at_seconds measured from the exact S01–S09 alignment-cache word timestamps; S08 2.5s reveals the threshold at 约; repeated threshold is a labeled state change"
+}

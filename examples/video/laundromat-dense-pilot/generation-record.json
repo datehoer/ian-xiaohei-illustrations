@@ -1,0 +1,115 @@
+{
+  "profile": "dense-illustrated-static-v1",
+  "status": "trial",
+  "generated_illustrations": [
+    {
+      "id": "storefront",
+      "file": "images/storefront.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: A welcoming small Chinese neighborhood self-service laundromat on a street corner. Full-bleed wide establishing shot: orange canopy, large glass windows revealing white front-loading washing machines and a pale teal bench, apartment facades, a bicycle and small street tree. Warm late afternoon. No people, no dogs, no animals. Entrance on the right, shop dominates the frame. Leave a patch of light sky/wall near upper left for a later title.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-d768d273-436f-496b-a232-556ab0b7a7df.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "washer",
+      "file": "images/washer.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: A single commercial front-loading washing machine seen three-quarter front, very large on the right half of a clean off-white background. Orange towel clearly visible through round glass door, simple orange circular start button with no glyphs; small laundry basket at its base. The left 40 percent is uncluttered for an editable price overlay. No person, no animal, no paws. No water pouring out. Elegant equipment close-up, no surrounding room.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-2ec12db8-9fa9-4bab-ae8e-1c90a52cdf54.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "dryer",
+      "file": "images/dryer.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: A single commercial tumble dryer seen three-quarter front, very large on the right half of a clean off-white background. Folded pale teal towels visible through a wide circular glass door, a few delicate heat-wave lines above machine, ventilation duct curves behind. The left 40 percent is uncluttered for an editable price overlay. No person, no animal, no paws. Distinct from a washing machine, no water or detergent. Elegant equipment close-up.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-76c3d521-676d-4a08-9567-d739340529f8.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "costs",
+      "file": "images/costs.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: A clean editorial still life on pure white. On the right half, a large water meter and short blue pipe, a simple yellow lightning bolt, and a plain orange detergent bottle with a small measuring cup. These three objects communicate variable usage costs. Heavy clear contours, flat muted fills, very little detail. Left 40 percent left clear for an editable price. No people, no animals, no text, no cash.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-30b61123-51a8-4a1c-b1e4-53960fe767c7.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "rent",
+      "file": "images/rent.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: Close-up of a blank cream lease sheet held down by a brass key ring and a plain closed envelope, on a wooden counter on the right side. Through a simple window behind them a row of idle laundromat machines. Warm cream and muted teal, clean flat ink illustration. The upper left 40 percent is a light blank wall for editable rent price. No people, no animal, no letters, no writing or numbers.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-5ca59a40-b821-4f98-9abb-21dc8ea4c365.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "empty",
+      "file": "images/empty.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: Full-bleed quiet interior of a small self-service laundromat at a slow time. White front-loading washers with orange buttons recede along the right wall; empty pale teal bench in foreground, glass entrance toward left rear, one basket and wall clock without numbers. No customers, no characters, no animal. Restrained cool muted blue and cream palette, clear hand drawn contours and broad simple forms. A quiet blank light wall in upper left can receive an editable loss figure; no text or signage.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-e662ccdc-fb55-4f8c-8f19-95ff886edacf.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "owner",
+      "file": "images/owner.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nReference is character identity and clean linework only. Keep anthropomorphic orange-and-white corgi with large upright ears, white forehead blaze and muzzle, red collar, white short-sleeve collared shirt, charcoal trousers and pale paws. Do not copy reference pose or bill/calculator props. Preserve simple ink 2D style; avoid lush painterly texture.\nScene: Medium close-up, warm and attentive expression. The corgi owner on the RIGHT half leans over a wooden counter, holding open a large blank ledger with one paw, other paw points to a short row of simple coins. This shot asks what the shop earns; it is thoughtful, not distressed. Light cream wall and a sliver of laundromat in background. LEFT 42 percent clear for a question overlay. Only two arms and two paws.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-1b49f28b-1281-4b0b-99f9-6d0a0820620b.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "cleaning",
+      "file": "images/cleaning.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nReference is character identity and clean linework only. Keep anthropomorphic orange-and-white corgi with large upright ears, white forehead blaze and muzzle, red collar, white short-sleeve collared shirt, charcoal trousers and pale paws. Do not copy reference pose or bill/calculator props. Preserve simple ink 2D style; avoid lush painterly texture.\nScene: Full scene inside the laundromat. Corgi owner on RIGHT kneels beside the lower access of a large dryer and carefully brushes lint from a removable flat lint filter into a small waste bin. Correct simple anatomy, just two arms. The room has white machines, muted teal wall and orange accents. LEFT 40 percent is calm pale wall/floor for an editable annual labor amount. Show real maintenance effort, no magic, no words.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-9c467295-1da3-4cec-a7a1-7d8f9bff6d9f.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "profit",
+      "file": "images/profit.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nReference is character identity and clean linework only. Keep anthropomorphic orange-and-white corgi with large upright ears, white forehead blaze and muzzle, red collar, white short-sleeve collared shirt, charcoal trousers and pale paws. Do not copy reference pose or bill/calculator props. Preserve simple ink 2D style; avoid lush painterly texture.\nScene: Medium close-up on RIGHT of corgi owner at a counter holding a shallow tray with a small neat stack of coins, expression cautiously relieved after paying expenses. One paw supports tray, other touches its edge. A few plain paid envelopes lie on counter. Clean white background with muted teal counter accent. LEFT 42 percent blank for a large editable annual profit number. Only two arms. No written money denominations or text.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-4e906c6e-9027-4b3e-8be4-b23d0701742b.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "tools",
+      "file": "images/tools.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: Large simple editorial object illustration on the RIGHT of pure white background: open muted-teal maintenance toolbox with wrench, screwdriver and a plain service receipt, beside a compact tablet showing only a few abstract colored shapes. Communicate repairs, software and operating expenses. LEFT 40 percent blank for editable annual cost. Broad flat shapes, ink contours, minimal details, no people, no animals, no text, no numbers.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-eeac468d-e599-49f0-9067-7f2ea2d013ae.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "wear",
+      "file": "images/wear.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: A clear side-by-side object comparison across RIGHT two-thirds: a fresh front-load washer with a tiny sparkle and orange door accent, and the same model visibly older with small scratches and a loose worn rubber gasket placed at its base. A modest curved arrow above points from new to worn to communicate gradual equipment wear. Clean white background, simple flat fills and black contours. Leave LEFT 30 percent for an editable depreciation figure. No people, no animals, no broken explosions, no labels or text.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-85adfa8d-16b7-436e-b639-b90bfb1be5d2.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    },
+    {
+      "id": "busy",
+      "file": "images/busy.png",
+      "prompt": "Use case: illustration-story. Generate ONE finished standalone 16:9 landscape frame, 1536x864 or larger, for a Chinese business explainer. Hand-drawn editorial animation still: clean slightly irregular black ink outlines, restrained flat warm cream, muted teal blue, sage green, warm orange and charcoal. Simple readable 2D shapes, no photorealism, no 3D, no hatch shading or paper texture. No text, numbers, letters, logos or watermark anywhere. No borders, no title bar, no infographic panels. Objects large and readable on a small screen. This is full-frame artwork; do not put the scene inside a white slide margin. Keep focal objects away from the lowest 12 percent where captions will be overlaid; the background may continue there.\nScene: Full-bleed interior of a neighborhood laundromat in a busy period. Several orange-and-white anthropomorphic corgi customers with distinct simple outfits hold laundry baskets and use white front-loading washers, muted teal benches and walls. The main owner is not prominent. Clear foreground, midground and background; no dense crowd. Cropped upper-body customer with orange towel at right foreground, two customers left midground, all anatomy coherent and simple. Bright optimistic atmosphere. Light ceiling space near upper center for an editable daily order figure. No letters, words, numbers, prices or signs.",
+      "tool": "built-in image_gen",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-d305713f-901e-47bf-80e5-ef2ce84c6963.png",
+      "visual_qa": "Viewed generated result: scene/object, no unwanted primary character in non-character shots, legible composition, no business values generated into art. Decorative meter marks and generic receipt lines are illustrative."
+    }
+  ],
+  "native_diagrams": {
+    "generator": "author.py",
+    "files": [
+      "images/attach.png",
+      "images/contribution.png",
+      "images/calendar.png",
+      "images/income.png",
+      "images/year.png",
+      "images/loss.png",
+      "images/threshold.png"
+    ],
+    "note": "Native data graphics; separate from generated illustration count."
+  }
+}

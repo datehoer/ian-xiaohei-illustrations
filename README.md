@@ -23,6 +23,8 @@
 
 角色不必出现在每个镜头：街角环境、机器特写、地图或统计图可以独立表达内容。视频默认 16:9，并在底部为字幕预留空间；用户指定的画幅优先。
 
+用户选择更多图片、较少角色和完整场景时，可启用 [密集插画试验方案](ian-xiaohei-illustrations/references/dense-illustrated-video.md)。目前已制作 [洗烘店视觉试片源文件](examples/video/laundromat-dense-pilot/storyboard.md)，采用同一份已确认旁白，单独比较全屏画面与语义切镜；新方案不自动取代旧版的用户确认记录。程序与复现步骤见 [试片说明](docs/dense-video-pilot.md)。
+
 ## 解释性引线标注
 
 - **引线标注**：短文字对应到具体对象或部位，例如“每月都来”指向周期性费用。

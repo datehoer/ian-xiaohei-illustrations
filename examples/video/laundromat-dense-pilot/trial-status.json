@@ -1,0 +1,21 @@
+{
+  "status": "technical-checks-passed-awaiting-user-feedback",
+  "profile": "dense-illustrated-static-v1",
+  "seconds": 60.06666666666667,
+  "shots": 23,
+  "image_assets": 19,
+  "generated_illustrations": 12,
+  "native_diagrams": 7,
+  "character_shots": 6,
+  "non_character_shots": 17,
+  "character_seconds": 15.633333333333333,
+  "mean_shot_seconds": 2.611594202898551,
+  "same_narration_wav_and_captions": true,
+  "same_decoded_audio_as_approved_mp4": true,
+  "decoded_audio_sha256": "SHA256=51429cf6cf74619e9d63a482263dd2088c305060d1ee2deadc92d67ec59fa7e7",
+  "full_media_decode": true,
+  "explicit_cuts_unchanged": true,
+  "full_frame_coverage": true,
+  "visual_qa": "Reviewed every shot midpoint; fixed loss-row label overlap and cost label contrast. Final corrected frames reviewed separately. Image generation inspected for character identity and anatomy. No new speech was synthesized. No claim of subjective audio listening.",
+  "sha256": "a142264e8caa1f215253942afa3fdcf4e092391c51031a1b60de66f3b3e490f5"
+}

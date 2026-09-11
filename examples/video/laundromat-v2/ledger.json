@@ -1,0 +1,91 @@
+{
+  "status": "all_financial_inputs_are_explicit_hypotheses",
+  "currency": "CNY",
+  "scope": "社区自助洗烘店情景；上海公开资料只用于机制对照",
+  "tax_basis": "收入和成本统一为模型净额，不模拟增值税及其附加的具体申报；利润未扣所得税；无融资。不是实际门店含税价格报价。",
+  "inputs": {
+    "wash_price": 12,
+    "dry_price": 10,
+    "dry_cycles_per_wash": 0.6,
+    "wash_variable_cost": 3,
+    "dry_variable_cost": 3,
+    "wash_cycles_per_day": 50,
+    "operating_days": 360,
+    "annual_rent": 72000,
+    "annual_labor_including_owner": 48000,
+    "annual_other_operations": 18000,
+    "equipment_capex": 180000,
+    "equipment_life_years": 6,
+    "fitout_capex": 60000,
+    "fitout_life_years": 5,
+    "deposit": 18000,
+    "initial_working_cash": 42000
+  },
+  "base": {
+    "wash_cycles": 18000,
+    "dry_cycles": 10800,
+    "revenue": 324000.0,
+    "variable_costs": 86400.0,
+    "contribution": 237600.0,
+    "pretax_profit": 57600.0
+  },
+  "scenarios": {
+    "30": {
+      "wash_cycles": 10800,
+      "dry_cycles": 6480,
+      "revenue": 194400.0,
+      "variable_costs": 51840.0,
+      "contribution": 142560.0,
+      "pretax_profit": -37440.0
+    },
+    "40": {
+      "wash_cycles": 14400,
+      "dry_cycles": 8640,
+      "revenue": 259200.0,
+      "variable_costs": 69120.0,
+      "contribution": 190080.0,
+      "pretax_profit": 10080.0
+    },
+    "50": {
+      "wash_cycles": 18000,
+      "dry_cycles": 10800,
+      "revenue": 324000.0,
+      "variable_costs": 86400.0,
+      "contribution": 237600.0,
+      "pretax_profit": 57600.0
+    },
+    "60": {
+      "wash_cycles": 21600,
+      "dry_cycles": 12960,
+      "revenue": 388800.0,
+      "variable_costs": 103680.0,
+      "contribution": 285120.0,
+      "pretax_profit": 105120.0
+    }
+  },
+  "discount_wash_2": {
+    "wash_cycles": 18000,
+    "dry_cycles": 10800,
+    "revenue": 288000.0,
+    "variable_costs": 86400.0,
+    "contribution": 201600.0,
+    "pretax_profit": 21600.0
+  },
+  "dry_attach_40pct": {
+    "wash_cycles": 18000,
+    "dry_cycles": 7200,
+    "revenue": 288000.0,
+    "variable_costs": 75600.0,
+    "contribution": 212400.0,
+    "pretax_profit": 32400.0
+  },
+  "annual_depreciation": 42000,
+  "annual_fixed_plus_depreciation": 180000,
+  "contribution_per_wash": 13.2,
+  "breakeven_wash_per_day": 37.87878787878788,
+  "initial_cash": 300000,
+  "simplified_pretax_operating_cash": 99600,
+  "simplified_static_cash_recovery_years_base": 3.0120481927710845,
+  "simplified_static_cash_recovery_years_40": 5.76036866359447,
+  "cash_caveat": "加回折旧仅为简化经营现金近似；尚未扣所得税、更新投入、营运资金变化；回收期不是承诺。店主劳动价值已在人工计一次。"
+}

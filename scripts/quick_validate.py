@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import struct
 import sys
@@ -20,6 +21,7 @@ REQUIRED_SKILL_FILES = [
     "references/composition-patterns.md",
     "references/prompt-template.md",
     "references/qa-checklist.md",
+    "references/video-production.md",
     "references/character-design.md",
     "references/annotations.md",
     "references/characters/corgi-minimal.md",
@@ -29,6 +31,7 @@ REQUIRED_SKILL_FILES = [
 ]
 README_IMAGE_PATTERN = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 MARKDOWN_LINK_PATTERN = re.compile(r"!?\[[^\]\n]*\]\(([^)\n]+)\)")
+GENERATED_DIRS = {'.git', '.venv', 'venv', '__pycache__', 'node_modules', 'outputs', 'work'}
 DRAFT_MARKERS = (
     "TODO",
     "FIXME",
@@ -148,8 +151,8 @@ class Validator:
 
     def validate_local_links(self) -> None:
         skill_root = (self.root / SKILL_DIR).resolve()
-        for path in sorted(self.root.rglob("*.md")):
-            if ".git" in path.parts:
+        for path in sorted(source_files(self.root)):
+            if path.suffix.lower() != '.md':
                 continue
             for raw_target in MARKDOWN_LINK_PATTERN.findall(read_text(path)):
                 # Inline links, including optional Markdown titles and angle brackets.
@@ -176,9 +179,7 @@ class Validator:
         self.check("## v1.0.0" in changelog, "CHANGELOG.md should preserve the initial release entry")
 
     def validate_no_draft_markers(self) -> None:
-        for path in self.root.rglob("*"):
-            if not path.is_file() or ".git" in path.parts:
-                continue
+        for path in source_files(self.root):
             if path.suffix.lower() not in {".md", ".yaml", ".yml", ".py"}:
                 continue
             if path.name == "quick_validate.py":
@@ -186,6 +187,14 @@ class Validator:
             text = read_text(path)
             for marker in DRAFT_MARKERS:
                 self.check(marker not in text, f"draft marker {marker!r} found in {relative_to_root(self.root, path)}")
+
+
+def source_files(root: Path):
+    """Check authored files without scanning downloaded runtimes or generated output."""
+    for directory, dirs, files in os.walk(root):
+        dirs[:] = [name for name in dirs if name not in GENERATED_DIRS]
+        for name in files:
+            yield Path(directory) / name
 
 
 def read_text(path: Path) -> str:

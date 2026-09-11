@@ -1,0 +1,52 @@
+{
+  "tool": "built-in image_gen",
+  "original_files": {
+    "storefront": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-f81dd816-920b-48e5-b7a5-9b5479f219d3.png",
+    "payment": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-87bba9c2-2e7b-4830-b4b4-340f959c92e7.png",
+    "bedding": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-374c3803-64d4-4822-a1fe-cff31aabd2b7.png",
+    "campus": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-5315b42f-b5b0-4031-8e9c-b0925d0a126f.png",
+    "clock": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-4c852a2e-0ba2-4239-831d-a29770f6013b.png",
+    "delivery": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-64b0efa0-1544-4981-a17c-4dcde93bafc2.png",
+    "machines": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-3a4c289d-15d2-4fd7-b6db-dedf0ff0ae66.png",
+    "plumbing": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-398eb35d-9c5b-4518-a8d8-c16aaf2114a1.png",
+    "keys": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-30bd1101-6129-4791-bda9-fd256c59f194.png",
+    "loading": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-98cdb2ab-0eda-41bd-9422-a6adb67a385d.png",
+    "transfer": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-a5bcb20b-2107-46a1-8f54-ba9fbcdb9134.png",
+    "detergent": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-3eb5236f-62fe-4b86-a6ff-c891ed8fc0b2.png",
+    "water": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-dbac4d82-c796-425a-a9fc-244931c8a898.png",
+    "dryer": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-9beecad3-6f28-46c2-9f75-ed7789a55180.png",
+    "calendar": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-8d6702cb-8a77-4e08-9a2a-e56e54ff91ed.png",
+    "lease": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-5484f977-e644-440f-b2f8-3fec8f2f12ff.png",
+    "receipt": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-606cbb10-ee2b-4eda-91ad-b83b7e09a2b9.png",
+    "cleaning": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-d65fc158-ff7c-4877-b59c-0ba5a348d553.png",
+    "repair": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-ac63e3ee-6a73-4804-927d-963e54475d56.png",
+    "wear": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-bb637025-72eb-43b4-8c7b-fbd3bad41a42.png",
+    "empty": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-ecf45e7e-f401-4613-b3f3-f6ecc8e73375.png",
+    "ledger": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-5e2ee96d-1984-4a12-b24b-ac310cba1280.png",
+    "balance": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-2da1a91b-0106-4953-92c9-3b707b93dd06.png",
+    "quiet": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-341fe521-2551-48d6-b969-c0cbee3e2411.png",
+    "discount": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-2e2a7351-cadd-44f4-923f-921d3778b776.png",
+    "sunny": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-b83f1664-b459-4490-a97f-5307e7acdc2d.png",
+    "rainy": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-97e6726a-fffd-462a-93d7-49e0e827b0f3.png",
+    "location": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-114900c8-663d-4ba3-9030-86490e912e36.png",
+    "queue": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-752f4f8b-ce8c-4419-8e4a-aa411335d628.png",
+    "phone": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-8ceb160a-eaf8-4fdf-b4bf-ab51d6f2dc2d.png",
+    "machines-v2": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-07d427bc-9f62-42f0-bd9a-86632d8beefa.png",
+    "receipt-v2": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-e0b9ee19-9223-43ca-a402-394108aadea7.png",
+    "dryer-v2": "/Users/datehoer/.codex/generated_images/01a08f3f-8222-7a52-9330-64f8423d074b/exec-ae3ad4ce-3a20-4b58-b17b-acf46cc64e81.png"
+  },
+  "corrections": [
+    {
+      "id": "receipt",
+      "prompt": "Edit this illustration preserving the corgi identity, face, clothing, colors, counter, two coin trays, basket and receipt printer. Fix the anatomy: EXACTLY TWO arms and TWO paws. Remove the entire extra arm and paw touching the chin. The corgi's right arm reaches down from the right shoulder to put one coin in a tray; its left arm reaches down from the left shoulder to rest one paw on the countertop. No crossed arms, no paw on chin, no floating hand. Preserve 16:9 white background and simple line illustration."
+    },
+    {
+      "id": "machines",
+      "prompt": "Edit this illustration into an accurate machine-count diagram. Remove the corgi and basket completely. On the LEFT show EXACTLY SIX separate front-loading washing machines, evenly spaced, all doors closed and visible. To the RIGHT, separated by a generous white gap, show EXACTLY FOUR dryers in a two by two stack. Total ten visible circular doors. No hidden machines and no additional appliances. No characters, no text, no numbers. Preserve thin black contour and white/orange restrained flat palette on pure white 16:9 background. Keep all units within central 80% and middle 60% of frame."
+    },
+    {
+      "id": "dryer",
+      "prompt": "Edit this into a simple exterior illustration of a tumble dryer, retaining clean white background and sparse black/orange line style. Remove the character entirely. Remove the exposed heater and all cutaway panels and flow arrows. Show ONE front-loading dryer with its round glass door CLOSED, an orange towel visible behind the glass, and a simple external exhaust duct behind it. No interior schematic, no exposed hot parts, no person, no text. Pure white background, 16:9 landscape, central large object with top and bottom white space."
+    }
+  ]
+}

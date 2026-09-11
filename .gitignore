@@ -12,3 +12,11 @@ dist/
 
 # Logs
 *.log
+
+# Credentials and local runtime
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+work/install-audit/

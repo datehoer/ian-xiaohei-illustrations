@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Captured the user-approved static narrated-video workflow in the existing skills, including shared short/long research, independent Simplified Chinese typography, narration checks, and episode source preservation.
+- Made video page labels and ASR vocabulary configurable per episode, and new audio timelines portable across project locations; retained compatibility with existing absolute paths.
+
 - Added a minimal-line anthropomorphic corgi as the default character, with an independent identity profile and reference image; preserved Xiaohei as an explicit optional preset.
 - Added character-design and content-illustration modes under the existing skill name, with reusable project character assets and narration-based shot planning.
 - Added explanatory callouts with explicit target parts, separate flow arrows, source-note guidance, and image QA for annotation endpoints and character consistency.

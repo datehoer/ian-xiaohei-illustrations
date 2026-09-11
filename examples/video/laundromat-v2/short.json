@@ -1,0 +1,185 @@
+{
+  "schema_version": 2,
+  "title": "一家自助洗烘店，一年到底能赚多少？",
+  "series_label": "拥有一门生意 / 自助洗烘店",
+  "asr_hint": "简体中文。自助洗烘店，洗衣，烘干，贡献毛利，税前利润，折旧。",
+  "disclosure": "社区型门店 · 情景测算",
+  "tts": {
+    "voice": "白桦",
+    "style": "用自然清晰的普通话讲解，像和朋友认真算账。语速中等偏利落，句间短停顿，数字清楚，不拖长句尾，不要播音腔。"
+  },
+  "fps": 30,
+  "source_date": "2026-09-11",
+  "edition": "short",
+  "blocks": [
+    {
+      "id": "S01",
+      "chapter": "一分钟看懂这本账",
+      "text": "一家自助洗烘店，一年赚多少？用一组社区店假设，算清楚。",
+      "shots": [
+        {
+          "image": "images/storefront.png",
+          "layout": "scene",
+          "heading": "一家洗烘店，一年赚多少？",
+          "metric": "",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "chapter": "一分钟看懂这本账",
+      "text": "洗一次十二元，烘一次十元。假设每十筒洗衣，带来六次烘干。",
+      "shots": [
+        {
+          "image": "images/loading.png",
+          "layout": "split",
+          "heading": "先看洗衣与烘干",
+          "metric": "12 元 + 10 元",
+          "detail": "分别收费 · 演示假设"
+        },
+        {
+          "layout": "scene",
+          "image": "images/transfer.png",
+          "heading": "每 10 筒洗衣，带来 6 次烘干"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "chapter": "一分钟看懂这本账",
+      "text": "平均每筒洗衣，贡献十八元收入。扣掉四块八变动成本，剩十三块二。",
+      "shots": [
+        {
+          "image": "images/detergent.png",
+          "layout": "split",
+          "heading": "先算一筒的贡献",
+          "metric": "13.20 元",
+          "detail": "18 元收入 − 4.8 元变动成本"
+        },
+        {
+          "layout": "scene",
+          "image": "images/payment.png",
+          "heading": "这还不是净利润"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "chapter": "一分钟看懂这本账",
+      "text": "每天洗五十筒，一年营业三百六十天，全年贡献二十三万七千六。",
+      "shots": [
+        {
+          "image": "images/calendar.png",
+          "layout": "split",
+          "heading": "把贡献放到全年",
+          "metric": "237,600 元",
+          "detail": "13.2 × 50 × 360"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "chapter": "一分钟看懂这本账",
+      "text": "再扣房租七万二，含店主劳动的人工四万八。",
+      "shots": [
+        {
+          "image": "images/lease.png",
+          "layout": "split",
+          "heading": "房租和人工，仍要支付",
+          "metric": "72,000 + 48,000",
+          "detail": "年度开支 · 假设"
+        },
+        {
+          "layout": "scene",
+          "image": "images/cleaning.png",
+          "heading": "自助，也有人在维护"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "chapter": "一分钟看懂这本账",
+      "text": "其他运营一万八，折旧四万二。税前利润，剩五万七千六。",
+      "shots": [
+        {
+          "image": "images/repair.png",
+          "layout": "split",
+          "heading": "扣完开支，再看利润",
+          "metric": "57,600 元 / 年",
+          "detail": "含折旧 · 已计店主劳动 · 无贷款"
+        },
+        {
+          "layout": "table",
+          "heading": "基准年账",
+          "rows": [
+            {
+              "label": "贡献毛利",
+              "value": "237,600"
+            },
+            {
+              "label": "房租 + 人工",
+              "value": "−120,000"
+            },
+            {
+              "label": "其他运营 + 折旧",
+              "value": "−60,000"
+            },
+            {
+              "label": "税前利润",
+              "value": "57,600"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "chapter": "一分钟看懂这本账",
+      "text": "但每天只有三十筒，就会亏三万七千四百四十。",
+      "shots": [
+        {
+          "image": "images/quiet.png",
+          "layout": "split",
+          "heading": "客流一变，结果就变",
+          "metric": "−37,440 元 / 年",
+          "detail": "每天洗衣 30 筒 · 其他条件不变"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "chapter": "一分钟看懂这本账",
+      "text": "同样条件下，平均每天约三十八筒，才能打平。",
+      "shots": [
+        {
+          "image": "images/balance.png",
+          "layout": "split",
+          "heading": "先找到盈亏平衡点",
+          "metric": "约 38 筒 / 日",
+          "detail": "价格与烘干比例保持不变"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "chapter": "一分钟看懂这本账",
+      "text": "这些不是行业均值。真实客流、成交价和房租，才决定你最后剩多少。",
+      "shots": [
+        {
+          "image": "images/receipt-v2.png",
+          "layout": "split",
+          "heading": "用真实记录，替换这组假设",
+          "metric": "情景测算",
+          "detail": "真实经营结果，取决于门店条件"
+        }
+      ],
+      "audio_edit": {
+        "end_seconds": 8.65,
+        "cache_fingerprint": "ec17afdae4a3819fe21e31dc",
+        "reason": "ASR 核验完整首遍于 8.3 秒结束，10.56 秒开始重复朗读；保留第一遍及短尾音。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "status": "user-approved",
+  "approved_on": "2026-09-11",
+  "user_feedback": "可以，我感觉这一版做的还不错。",
+  "profile": "corgi-narrated-static-v1",
+  "scope": "洗烘店的简体字形修正、静态镜头版本；不代表后续新版本自动获认可。",
+  "reference": {
+    "short_seconds": 60.066667,
+    "short_shots": 13,
+    "long_seconds": 596.866667,
+    "long_shots": 72,
+    "long_unique_images": 30
+  },
+  "confirmed_choices": [
+    "Heiti SC 简体字形；全部文字独立后期绘制",
+    "图片在单镜内静止，保留分镜切换",
+    "MiMo 白桦配音、原稿中文字幕",
+    "经营金额明确标为情景假设"
+  ],
+  "outputs": [
+    {
+      "path": "outputs/laundromat-v2/short/video-fixed.mp4",
+      "bytes": 3642815,
+      "sha256": "eddc73baa3a4937d6670e026ed7ad03d5c34b35472eeea2817982ab6c3b45ffe"
+    },
+    {
+      "path": "outputs/laundromat-v2/short/narration.wav",
+      "bytes": 5766444,
+      "sha256": "406967894f5a520e83c84886053edc1b34bf4d53f68243168b1c2eae283e62c8"
+    },
+    {
+      "path": "outputs/laundromat-v2/short/captions.json",
+      "bytes": 2111,
+      "sha256": "007c67ba64f9f66cdfe9740648a36f93660975384ab3a98d009a8e48459502fb"
+    },
+    {
+      "path": "outputs/laundromat-v2/short/subtitles.srt",
+      "bytes": 1217,
+      "sha256": "174b479dd7697f09f677469182e3cf57ca4cdc1c40178961c4b8f479644283b1"
+    },
+    {
+      "path": "outputs/laundromat-v2/short/audio-timeline.json",
+      "bytes": 7178,
+      "sha256": "bbc08be575322cf4f8173b2658a09b00e4d726d421081126cc1afbb1a1511f03"
+    },
+    {
+      "path": "outputs/laundromat-v2/short/timeline.json",
+      "bytes": 6367,
+      "sha256": "cf133448ba63ebefbcc39a013c6d21aed21b4a1ae52e6ab3b8be12560c87865c"
+    },
+    {
+      "path": "outputs/laundromat-v2/short/verification.json",
+      "bytes": 1807,
+      "sha256": "3e114c800345fcc68e059648cd707826b6fe39a3898c41bed3c2c54ff009dd1d"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/video-fixed.mp4",
+      "bytes": 29685514,
+      "sha256": "0e6dd375b45e3cbb6748131bbf550734aba49affde22e5d1552caf4325308efe"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/narration.wav",
+      "bytes": 57299244,
+      "sha256": "b4c8f875fb491355cea3a20223ead45895694bdb14e22c52a705fa9579e793ac"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/captions.json",
+      "bytes": 22817,
+      "sha256": "f465a658ca87ce879ee7332b65435dcc78ab9d959d11b55ebe187a49150e9f7b"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/subtitles.srt",
+      "bytes": 13145,
+      "sha256": "f0739946296508057ccb2fb90cb80333edc48537f004d8ffbc05bbbf989b3347"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/audio-timeline.json",
+      "bytes": 42272,
+      "sha256": "2d8dcc7eb3d232b4d1b853be50683c82c1c48c09e2ab45533ef7e4c299e486eb"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/timeline.json",
+      "bytes": 51351,
+      "sha256": "28c511161ac90b188b630dd6ba839100ed785803a3daa9c753863802b8d14ef2"
+    },
+    {
+      "path": "outputs/laundromat-v2/long/verification.json",
+      "bytes": 1814,
+      "sha256": "129ea4e21599c5f6653cbfdbb8090f84e1f2c104e7098a49adb19ad13330505f"
+    }
+  ],
+  "editable_inputs": [
+    {
+      "path": "examples/video/laundromat-v2/author.py",
+      "bytes": 31370,
+      "sha256": "c8bfa0a7d2ee6d251be451dc36fc326f077b56b7088cf89cd4e70ac7956abedf"
+    },
+    {
+      "path": "examples/video/laundromat-v2/generation-record.json",
+      "bytes": 6539,
+      "sha256": "d9674573d27788bd29a64c0432d0d004faad553fb17792f4a455a71cfe11a017"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/balance.png",
+      "bytes": 1109223,
+      "sha256": "013ad728dadef137463858ff8ba0e94614ad42e4999f106dc36ce8f3e345bc87"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/bedding.png",
+      "bytes": 1056640,
+      "sha256": "2ca3a1a161cb4a7cb732a337cfb74c9290200ce7506ec8594dcf0dc1dcf70be5"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/calendar.png",
+      "bytes": 1248843,
+      "sha256": "9299822110267f9d34dd48568cf71041cdd0a26113d735e5b9001b9197f7f34c"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/campus.png",
+      "bytes": 1175510,
+      "sha256": "75b2995ac99721034cb8d7d58f0bc7c21ecd4fa47be875e6f1280ef01e6c04c3"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/cleaning.png",
+      "bytes": 1134452,
+      "sha256": "e370bf5bff488c5b564dac06ac8c53b2f3e9cfe13c730b16fa1ddbc607acb6c6"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/clock.png",
+      "bytes": 988635,
+      "sha256": "f23ec9616931ed857862a2ead026ba89a8c8d99c11d511e8101198011fcb3a17"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/delivery.png",
+      "bytes": 1099748,
+      "sha256": "4503429661f7afa7c6b440f0f36e447ca233070a6c6bb190d20b927121279666"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/detergent.png",
+      "bytes": 1028546,
+      "sha256": "c9c012216a79cca4084b232bc118ec73cb3fa4a28b0a37b61d753d7d066114d3"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/discount.png",
+      "bytes": 1133151,
+      "sha256": "c151b9955de142f6936175a2e86e616eadda9800d375d31d363d560c5678919c"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/dryer-v2.png",
+      "bytes": 933088,
+      "sha256": "9d2168d1baa5717ba29a7efdc11aec4e5bf441e980717efa36a4cb73a6a64f8f"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/dryer.png",
+      "bytes": 1188186,
+      "sha256": "e24c2b0708f55a139d9a402c7db5d4269e743812c9dfebf436851e5b83b3b1b6"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/empty.png",
+      "bytes": 1027809,
+      "sha256": "5c06fe2be2539facbb2ac771c9a5ddac82c9caca6a8e7b7899608b0eb062ffb8"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/keys.png",
+      "bytes": 1065449,
+      "sha256": "890dcd7b6cfcf3f39c7ebd54a21f9982f4c181d76f96befcedecf4ac3e7c571c"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/lease.png",
+      "bytes": 1039975,
+      "sha256": "b1f3216c3713cb9b38cfce28d7f3c6c0b75377e2b00628c8cc2da28ace1bd697"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/ledger.png",
+      "bytes": 1024431,
+      "sha256": "09dddbceb04da47274258e41b538392f2bfc39e6c473fec2b19d74bce3557799"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/loading.png",
+      "bytes": 1059870,
+      "sha256": "7afbbe95f84ace9312ae89e43656f2aeca2f972b00be8bd424402a809c4f4682"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/location.png",
+      "bytes": 1305114,
+      "sha256": "acb54cc58635fa63f2c789f6a439876ba4f843aba90ec0b07b61004e6b338875"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/machines-v2.png",
+      "bytes": 888927,
+      "sha256": "8c1c6bb3bb0ea8b95d98245b65060be3ec42acb01c7b9f925acc7cd343314a8b"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/machines.png",
+      "bytes": 1042285,
+      "sha256": "1302c1c3787d0f79cd46869909df3bec9a9ac28460143ddd03c427622f6bd9c5"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/payment.png",
+      "bytes": 1107682,
+      "sha256": "dd00a0745485ea9c983fb09170ad7dd49584d8d498392bad28df8a68fce2418e"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/phone.png",
+      "bytes": 955557,
+      "sha256": "9669eb94408def5728dc4aaeb59d980945f17d6f2d8f74e3101401e0fd54ac71"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/plumbing.png",
+      "bytes": 1220565,
+      "sha256": "ed048d990e9bfe2fbaab6b26a5e36a49947ff58da015cc6c6e23cb463abe1d1a"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/queue.png",
+      "bytes": 1218174,
+      "sha256": "203ee9a9f0be0c6ea65580d6c1450eda0c04093ddd2635d5f52c361cbbb5e74c"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/quiet.png",
+      "bytes": 1180116,
+      "sha256": "4b6e35a5ac1124265abce59dc07d48e782cacfbcacfe5a62ec16ae55b3dcce13"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/rainy.png",
+      "bytes": 1334395,
+      "sha256": "1265f20c278c8f87d47a02d85dcc982bc76823d5bd2dc9bd5d1260f53e27ab7a"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/receipt-v2.png",
+      "bytes": 1313276,
+      "sha256": "afade22d89455e8dd7e74426016160a2d2b09bdae45c248e2f895695b0ea6d15"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/receipt.png",
+      "bytes": 1038173,
+      "sha256": "e5f9ca3c1fadcb12834e9acd02cc190618a63b422df737773857b1c674fc44fc"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/repair.png",
+      "bytes": 1195202,
+      "sha256": "c3a2ba11436221b42444decc9c8c05fc12fba09395a5beff7d594f6feaddc70d"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/storefront.png",
+      "bytes": 1306107,
+      "sha256": "9602219e053d4b9d21f7e77b37eb3cfc67b5918389d42c57bdb2665c83465d41"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/sunny.png",
+      "bytes": 1020124,
+      "sha256": "367180a8ffda6b4550ab564621334570ae2a049190d64df4ab201a9429d8ec5e"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/transfer.png",
+      "bytes": 1239308,
+      "sha256": "4410b4f5a0d9f1c322d93efeb011158c85ddfb86d875d0bfa4c267bacc5d1513"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/water.png",
+      "bytes": 1001720,
+      "sha256": "f757066a9422c2d9f03ed619157bf1fb3a99180edc29a66caf20238c217ef5a8"
+    },
+    {
+      "path": "examples/video/laundromat-v2/images/wear.png",
+      "bytes": 1064084,
+      "sha256": "5524f9e7e073e38b2a822610804163dd428d7cddc5e8263407c5006a4dc02032"
+    },
+    {
+      "path": "examples/video/laundromat-v2/ledger.json",
+      "bytes": 2767,
+      "sha256": "a3aee00c3cdb6ead83195e7acf5529f874d1acc37dc7a0ae356cf21d5b5a5049"
+    },
+    {
+      "path": "examples/video/laundromat-v2/long-script.md",
+      "bytes": 9042,
+      "sha256": "0227ea7d66e612e93b3a927ca07a2b770fd0bd86ac771a44eb1b0ba88b0f989d"
+    },
+    {
+      "path": "examples/video/laundromat-v2/long.json",
+      "bytes": 35271,
+      "sha256": "b970bd76cf7d31b5f267bd66af4e3750ca569616d32bbb897f3783be8583fe0e"
+    },
+    {
+      "path": "examples/video/laundromat-v2/prompts.json",
+      "bytes": 39160,
+      "sha256": "e88d16db3afd3d58e8cce1cee4dc063799be9225cf6be4eb3646d4087a4ab0f8"
+    },
+    {
+      "path": "examples/video/laundromat-v2/short-script.md",
+      "bytes": 1098,
+      "sha256": "78bd42e21799b2d60cd5b91a582915dbf609fb850c4371b49ffcd6c0872eb6d2"
+    },
+    {
+      "path": "examples/video/laundromat-v2/short.json",
+      "bytes": 5736,
+      "sha256": "8e703f8b93bb7ae7404223ad7c3a237598cf8baec4521e802482bed9ff3b5212"
+    },
+    {
+      "path": "examples/video/laundromat-v2/sources.md",
+      "bytes": 5560,
+      "sha256": "c1e72b457885aa2074ce9d7074b65e0e85755331f869f092f967f5cedd43d65c"
+    },
+    {
+      "path": "examples/video/laundromat-v2/storyboard.md",
+      "bytes": 9389,
+      "sha256": "898bf0f12b0926c484efdfe4aecc4fb965d48e566c54ad5f5165bffbda9f9d33"
+    }
+  ],
+  "runtime_recorded_at_archive": {
+    "python": "3.14.2",
+    "Pillow": "12.3.0",
+    "faster-whisper": "1.2.1",
+    "ffmpeg": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "backup_note": "文件指纹不是素材备份。outputs 被 Git 忽略；音频和视频需另行备份。"
+}

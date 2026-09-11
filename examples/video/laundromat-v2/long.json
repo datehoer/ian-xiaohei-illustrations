@@ -1,0 +1,1040 @@
+{
+  "schema_version": 2,
+  "title": "一家自助洗烘店，一年到底能赚多少？",
+  "series_label": "拥有一门生意 / 自助洗烘店",
+  "asr_hint": "简体中文。自助洗烘店，洗衣，烘干，贡献毛利，税前利润，折旧。",
+  "disclosure": "社区型门店 · 情景测算",
+  "tts": {
+    "voice": "白桦",
+    "style": "用自然清晰的普通话讲解，像和朋友认真算账。语速中等偏利落，句间短停顿，数字清楚，不拖长句尾，不要播音腔。"
+  },
+  "fps": 30,
+  "source_date": "2026-09-11",
+  "tempo": 0.9469977083333333,
+  "edition": "long",
+  "blocks": [
+    {
+      "id": "L01",
+      "chapter": "01 / 先把问题问清楚",
+      "text": "机器自己转，手机自己收钱。一家自助洗烘店，一年到底能赚多少？我们先给一个有条件的答案：这家假设门店，每天洗五十筒，税前一年剩五万七千六。",
+      "shots": [
+        {
+          "image": "images/storefront.png",
+          "layout": "scene",
+          "heading": "一家洗烘店，一年赚多少？",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "先看结果，再拆条件",
+          "rows": [
+            {
+              "label": "每天洗衣",
+              "value": "50 筒"
+            },
+            {
+              "label": "年度税前利润",
+              "value": "57,600 元"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L02",
+      "chapter": "01 / 先把问题问清楚",
+      "text": "注意，这是社区门店的情景测算，不是真实店铺财报，也不是全国平均。所有经营数字都会标明假设。我们借上海的公开资料，解释哪些东西能查证，哪些东西必须自己核实。",
+      "shots": [
+        {
+          "image": "images/ledger.png",
+          "layout": "split",
+          "heading": "先说明这本账的边界",
+          "metric": "情景测算",
+          "detail": "社区型门店 · 非行业均值"
+        },
+        {
+          "layout": "table",
+          "heading": "两类信息，各自说明口径",
+          "rows": [
+            {
+              "label": "公开资料",
+              "value": "回到原始发布页面核查"
+            },
+            {
+              "label": "经营数字",
+              "value": "明确标为情景假设"
+            }
+          ],
+          "note": "社区案例；未取得实际门店财报"
+        }
+      ]
+    },
+    {
+      "id": "L03",
+      "chapter": "01 / 先把问题问清楚",
+      "text": "先想顾客为什么进门。可能是被子太大，也可能是家里不方便烘干。你要观察的，是附近到底有多少重复发生的洗烘需求。街上人多，只是线索，还不是订单。",
+      "shots": [
+        {
+          "image": "images/bedding.png",
+          "layout": "scene",
+          "heading": "谁会反复走进这家店？",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "scene",
+          "image": "images/location.png",
+          "heading": "人流，还要变成付费需求"
+        }
+      ]
+    },
+    {
+      "id": "L04",
+      "chapter": "01 / 先把问题问清楚",
+      "text": "公开价格也不能随便搬。上海大学二零二五年的招租公告，要求标准洗不超过四元，而且有程序时长要求。那是校园项目的价格约束，不能直接当作社区店的成交价。",
+      "shots": [
+        {
+          "image": "images/campus.png",
+          "layout": "split",
+          "heading": "真实资料：校园有明确价格约束",
+          "metric": "≤ 4 元",
+          "detail": "标准洗 ≥ 40 分钟；仅此招租项目",
+          "source": "上海大学招租公告 · 2025-06-20 · zcb.shu.edu.cn"
+        },
+        {
+          "layout": "table",
+          "heading": "同叫自助洗衣，规则可能不同",
+          "rows": [
+            {
+              "label": "校园项目",
+              "value": "有专门的收费和服务条件"
+            },
+            {
+              "label": "社区门店",
+              "value": "需要实际成交价与租赁条件"
+            }
+          ],
+          "note": "校园项目不得直接代替社区价格样本",
+          "source": "上海大学招租公告 · 2025-06-20 · zcb.shu.edu.cn"
+        }
+      ]
+    },
+    {
+      "id": "L05",
+      "chapter": "02 / 钱先花在哪里",
+      "text": "现在把案例搭起来。假设六台洗衣机、四台烘干机，一年营业三百六十天。后面说的五十筒，指全店每天的洗衣循环，不是五十位顾客，也不包含烘干次数。",
+      "shots": [
+        {
+          "image": "images/machines-v2.png",
+          "layout": "split",
+          "heading": "这家假设门店长什么样？",
+          "metric": "6 洗 + 4 烘",
+          "detail": "全年营业 360 天"
+        },
+        {
+          "layout": "table",
+          "heading": "先统一计数单位",
+          "rows": [
+            {
+              "label": "洗衣量",
+              "value": "全店每天的洗衣循环"
+            },
+            {
+              "label": "烘干量",
+              "value": "单独计数"
+            },
+            {
+              "label": "顾客数",
+              "value": "不等于机器循环数"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L06",
+      "chapter": "02 / 钱先花在哪里",
+      "text": "六台机器够不够，不是把一天二十四小时全排满就算完。程序耗时、顾客取衣、清洁和故障都会占时间。更关键的是，机器有空位，不代表有人愿意付款。",
+      "shots": [
+        {
+          "image": "images/clock.png",
+          "layout": "scene",
+          "heading": "机器产能，不等于实际需求",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "scene",
+          "image": "images/quiet.png",
+          "heading": "空出来的时间，未必卖得掉"
+        }
+      ]
+    },
+    {
+      "id": "L07",
+      "chapter": "02 / 钱先花在哪里",
+      "text": "先假设设备投入十八万元。这个数字只是预算位，不是厂商报价。正式选设备，要把容量、烘干方式、安装和售后写进同一张询价表，才知道报价是否能比较。",
+      "shots": [
+        {
+          "image": "images/delivery.png",
+          "layout": "split",
+          "heading": "启动投入：设备",
+          "metric": "180,000 元",
+          "detail": "预算假设；需要具体型号报价"
+        },
+        {
+          "layout": "scene",
+          "image": "images/machines-v2.png",
+          "heading": "先把型号、安装和售后放在一起比较"
+        }
+      ]
+    },
+    {
+      "id": "L08",
+      "chapter": "02 / 钱先花在哪里",
+      "text": "再假设改造六万元，包括给排水、电力、排风和店面施工。便宜的铺子，如果配套改造很贵，未必便宜。我们把设备和改造分开记，后面折旧也分别计算。",
+      "shots": [
+        {
+          "image": "images/plumbing.png",
+          "layout": "split",
+          "heading": "启动投入：改造",
+          "metric": "60,000 元",
+          "detail": "预算假设；设备与改造分别记账"
+        },
+        {
+          "layout": "table",
+          "heading": "开业前的两笔投入",
+          "rows": [
+            {
+              "label": "设备",
+              "value": "180,000 元"
+            },
+            {
+              "label": "改造",
+              "value": "60,000 元"
+            },
+            {
+              "label": "合计",
+              "value": "240,000 元"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L09",
+      "chapter": "02 / 钱先花在哪里",
+      "text": "还没结束。再留一万八押金、四万二周转金，初始现金准备一共三十万。押金不是当年费用，周转金也不能又全算一次成本。这笔钱是为了让店撑过开业爬坡。",
+      "shots": [
+        {
+          "image": "images/keys.png",
+          "layout": "scene",
+          "heading": "启动现金，不只设备款",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "初始现金准备",
+          "rows": [
+            {
+              "label": "设备 + 改造",
+              "value": "240,000"
+            },
+            {
+              "label": "押金",
+              "value": "18,000"
+            },
+            {
+              "label": "周转金",
+              "value": "42,000"
+            },
+            {
+              "label": "合计",
+              "value": "300,000"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L10",
+      "chapter": "03 / 跟着一筒衣服算",
+      "text": "现在跟着一筒衣服走。为了看懂机制，假设洗一次成交价十二元，烘一次十元。这里用实际成交口径，不是划线原价。不同容量和不同程序，真实经营时还要继续拆。",
+      "shots": [
+        {
+          "image": "images/loading.png",
+          "layout": "split",
+          "heading": "一筒衣服，先从收入算起",
+          "metric": "12 元 / 洗",
+          "detail": "烘干另计：10 元 / 次"
+        },
+        {
+          "layout": "scene",
+          "image": "images/payment.png",
+          "heading": "算成交价，不算宣传原价"
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "chapter": "03 / 跟着一筒衣服算",
+      "text": "不是每筒洗完都烘。我们假设每十筒洗衣，平均带来六次烘干。于是每筒洗衣对应的组合收入，是十二元加六元，一共十八元。后面的账，都用这个组合。",
+      "shots": [
+        {
+          "image": "images/transfer.png",
+          "layout": "split",
+          "heading": "洗衣与烘干，分开计数",
+          "metric": "60%",
+          "detail": "烘干次数 ÷ 洗衣次数"
+        },
+        {
+          "layout": "table",
+          "heading": "组合收入",
+          "rows": [
+            {
+              "label": "洗衣",
+              "value": "12 元"
+            },
+            {
+              "label": "平均附带烘干",
+              "value": "10 × 0.6 = 6 元"
+            },
+            {
+              "label": "合计",
+              "value": "18 元 / 洗衣循环"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L12",
+      "chapter": "03 / 跟着一筒衣服算",
+      "text": "再扣随使用发生的成本。假设每次洗衣三元，每次烘干三元，包含对应的能源、耗材和交易费用。按六成烘干比例，一筒洗衣对应四块八变动成本。",
+      "shots": [
+        {
+          "image": "images/detergent.png",
+          "layout": "split",
+          "heading": "变动成本也要分别算",
+          "metric": "4.80 元",
+          "detail": "3 + 3 × 0.6"
+        },
+        {
+          "layout": "scene",
+          "image": "images/dryer-v2.png",
+          "heading": "烘干的能源成本，单独计算"
+        }
+      ]
+    },
+    {
+      "id": "L13",
+      "chapter": "03 / 跟着一筒衣服算",
+      "text": "这些成本怎么查？比如浦东二零二三年的区属供水通知，列出了非居民综合水价。但费率只是起点。还要看门店归哪个供水区域，以及这台机器每个程序实际用了多少水。",
+      "shots": [
+        {
+          "image": "images/water.png",
+          "layout": "split",
+          "heading": "真实费率，还要匹配实际用量",
+          "metric": "费率 × 用量",
+          "detail": "供水区域、计费类别、程序都要匹配",
+          "source": "浦东区属非居民水价通知 · 2023-11 · pudong.gov.cn"
+        },
+        {
+          "layout": "scene",
+          "image": "images/loading.png",
+          "heading": "再核实每个程序的实际耗水",
+          "source": "浦东区属非居民水价通知 · 2023-11 · pudong.gov.cn"
+        }
+      ]
+    },
+    {
+      "id": "L14",
+      "chapter": "03 / 跟着一筒衣服算",
+      "text": "设备铭牌上的千瓦是功率，账单上的度数是耗电量，两者不能直接替换。烘干还可能使用燃气。没有匹配机型和程序的实测值，三元成本就只能保留为假设。",
+      "shots": [
+        {
+          "image": "images/dryer-v2.png",
+          "layout": "split",
+          "heading": "别把功率，当成一筒的耗电",
+          "metric": "kW ≠ kWh",
+          "detail": "按机型、程序与实测账单核对"
+        },
+        {
+          "layout": "table",
+          "heading": "两个单位，含义不同",
+          "rows": [
+            {
+              "label": "kW",
+              "value": "功率"
+            },
+            {
+              "label": "kWh（度）",
+              "value": "用电量"
+            }
+          ],
+          "note": "按机型与程序实测；名义功率不等于单次用电量"
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "chapter": "03 / 跟着一筒衣服算",
+      "text": "十八元收入减去四块八，剩十三块二。这个数字叫贡献毛利，它还要替你支付房租、人工和设备损耗。看到七成多的比例，先别急着把它叫成净利润。",
+      "shots": [
+        {
+          "image": "images/receipt-v2.png",
+          "layout": "split",
+          "heading": "这一筒，先贡献多少？",
+          "metric": "13.20 元",
+          "detail": "18 − 4.8；尚未扣固定开支"
+        },
+        {
+          "layout": "table",
+          "heading": "一筒的收入去向",
+          "rows": [
+            {
+              "label": "组合收入",
+              "value": "18.00"
+            },
+            {
+              "label": "变动成本",
+              "value": "−4.80"
+            },
+            {
+              "label": "贡献毛利",
+              "value": "13.20"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L16",
+      "chapter": "04 / 摊开一年账本",
+      "text": "假设每天洗五十筒，一年就是一万八千筒，带来一万零八百次烘干。全年收入三十二万四，减去八万六千四的变动成本，留下二十三万七千六。",
+      "shots": [
+        {
+          "image": "images/calendar.png",
+          "layout": "scene",
+          "heading": "把单次贡献，放到全年",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "年度收入与贡献",
+          "rows": [
+            {
+              "label": "洗衣收入",
+              "value": "216,000"
+            },
+            {
+              "label": "烘干收入",
+              "value": "108,000"
+            },
+            {
+              "label": "总收入",
+              "value": "324,000"
+            },
+            {
+              "label": "变动成本",
+              "value": "−86,400"
+            },
+            {
+              "label": "贡献毛利",
+              "value": "237,600"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L17",
+      "chapter": "04 / 摊开一年账本",
+      "text": "接着是房租。假设每月六千，一年七万二。这个数字不是上海租金均值，只是这本账的条件。机器今天闲着，房东也不会因此少收一天租金。",
+      "shots": [
+        {
+          "image": "images/lease.png",
+          "layout": "split",
+          "heading": "固定开支：房租",
+          "metric": "72,000 元 / 年",
+          "detail": "每月 6,000 元 · 假设"
+        },
+        {
+          "layout": "scene",
+          "image": "images/storefront.png",
+          "heading": "客流变化，租金仍按合同支付"
+        }
+      ]
+    },
+    {
+      "id": "L18",
+      "chapter": "04 / 摊开一年账本",
+      "text": "人工也不能写零。假设店主劳动和外包清洁合计每月四千，一年四万八。清过滤网、处理退款、接故障电话，都要有人做。这里已经计入店主劳动，后面不再扣第二遍。",
+      "shots": [
+        {
+          "image": "images/cleaning.png",
+          "layout": "split",
+          "heading": "自助，不等于没有劳动",
+          "metric": "48,000 元 / 年",
+          "detail": "含店主劳动价值和外包清洁 · 假设"
+        },
+        {
+          "layout": "scene",
+          "image": "images/repair.png",
+          "heading": "售后电话，也属于经营时间"
+        }
+      ]
+    },
+    {
+      "id": "L19",
+      "chapter": "04 / 摊开一年账本",
+      "text": "维修、软件和其他运营开支，再留一年一万八的预算。实际发生可能不同，要用账单更新。上海城建职业学院的公开招租要求里，也明确写到清洁、运维和售后责任。",
+      "shots": [
+        {
+          "image": "images/repair.png",
+          "layout": "split",
+          "heading": "持续经营，还有这些开支",
+          "metric": "18,000 元 / 年",
+          "detail": "维修、软件及其他运营预算 · 假设",
+          "source": "劳动责任对照：上海城建职业学院公告 · 2024-12-05 · succ.edu.cn"
+        },
+        {
+          "layout": "scene",
+          "image": "images/phone.png",
+          "heading": "软件与售后，也需要运营预算",
+          "source": "劳动责任对照：上海城建职业学院公告 · 2024-12-05 · succ.edu.cn"
+        }
+      ]
+    },
+    {
+      "id": "L20",
+      "chapter": "04 / 摊开一年账本",
+      "text": "最后算折旧。假设十八万设备用六年，六万改造用五年，都不留残值，平均每年折旧四万二。这是本片的经济测算方法，不是替你确定税务折旧规则。",
+      "shots": [
+        {
+          "image": "images/wear.png",
+          "layout": "scene",
+          "heading": "设备损耗，要进入年账",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "年度折旧假设",
+          "rows": [
+            {
+              "label": "设备：180,000 ÷ 6",
+              "value": "30,000"
+            },
+            {
+              "label": "改造：60,000 ÷ 5",
+              "value": "12,000"
+            },
+            {
+              "label": "年度合计",
+              "value": "42,000"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L21",
+      "chapter": "04 / 摊开一年账本",
+      "text": "把账合起来：二十三万七千六的贡献，减房租七万二、人工四万八、其他开支一万八、折旧四万二，税前剩五万七千六。案例不设贷款，也还没扣所得税。",
+      "shots": [
+        {
+          "image": "images/ledger.png",
+          "layout": "scene",
+          "heading": "现在，才轮到税前利润",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "基准年账",
+          "rows": [
+            {
+              "label": "贡献毛利",
+              "value": "237,600"
+            },
+            {
+              "label": "房租",
+              "value": "−72,000"
+            },
+            {
+              "label": "人工",
+              "value": "−48,000"
+            },
+            {
+              "label": "其他运营",
+              "value": "−18,000"
+            },
+            {
+              "label": "折旧",
+              "value": "−42,000"
+            },
+            {
+              "label": "税前利润",
+              "value": "57,600"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L22",
+      "chapter": "05 / 最容易变的，是客流",
+      "text": "听起来还可以。但如果平均每天只有四十筒呢？单次贡献和固定开支不变，年度税前利润就降到一万零八十。每天少十筒，一年少赚四万七千五百二十。",
+      "shots": [
+        {
+          "image": "images/quiet.png",
+          "layout": "split",
+          "heading": "每天少 10 筒，会怎样？",
+          "metric": "10,080 元",
+          "detail": "40 筒 / 日时的年度税前利润"
+        },
+        {
+          "layout": "table",
+          "heading": "只改变洗衣量",
+          "rows": [
+            {
+              "label": "50 筒 / 日",
+              "value": "57,600 元"
+            },
+            {
+              "label": "40 筒 / 日",
+              "value": "10,080 元"
+            },
+            {
+              "label": "利润减少",
+              "value": "47,520 元"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L23",
+      "chapter": "05 / 最容易变的，是客流",
+      "text": "如果再降到每天三十筒，结果是全年亏三万七千四百四十。水电耗材会随订单减少，我们已经一起调低了。问题是房租、劳动预算和折旧，没跟着一起消失。",
+      "shots": [
+        {
+          "image": "images/empty.png",
+          "layout": "split",
+          "heading": "每天 30 筒，进入亏损",
+          "metric": "−37,440 元",
+          "detail": "年度税前结果 · 其他条件不变"
+        },
+        {
+          "layout": "table",
+          "heading": "30 筒 / 日的年度结果",
+          "rows": [
+            {
+              "label": "收入",
+              "value": "194,400"
+            },
+            {
+              "label": "变动成本",
+              "value": "−51,840"
+            },
+            {
+              "label": "固定开支 + 折旧",
+              "value": "−180,000"
+            },
+            {
+              "label": "税前利润",
+              "value": "−37,440"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L24",
+      "chapter": "05 / 最容易变的，是客流",
+      "text": "所以先问打平要多少。全年固定开支加折旧十八万，除以每筒十三块二，再除营业天数，得到每天约三十八筒。这个门槛只在价格和烘干比例不变时成立。",
+      "shots": [
+        {
+          "image": "images/balance.png",
+          "layout": "split",
+          "heading": "比年赚多少，更先要知道的数",
+          "metric": "约 38 筒 / 日",
+          "detail": "含折旧的盈亏平衡点"
+        },
+        {
+          "layout": "table",
+          "heading": "打平的计算",
+          "rows": [
+            {
+              "label": "年度固定开支 + 折旧",
+              "value": "180,000 元"
+            },
+            {
+              "label": "单次组合贡献",
+              "value": "13.20 元"
+            },
+            {
+              "label": "营业天数",
+              "value": "360 天"
+            },
+            {
+              "label": "理论门槛",
+              "value": "37.88 筒 / 日"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L25",
+      "chapter": "05 / 最容易变的，是客流",
+      "text": "再看降价。洗衣每筒便宜两元，如果订单还是每天五十筒，一年就少收三万六，利润只剩两万一千六。促销是否值得，要看新增贡献能不能补上让出去的收入。",
+      "shots": [
+        {
+          "image": "images/discount.png",
+          "layout": "split",
+          "heading": "便宜两元，要多卖多少？",
+          "metric": "21,600 元",
+          "detail": "洗衣降价 2 元、客流不变时的年利润"
+        },
+        {
+          "layout": "table",
+          "heading": "洗衣每筒降价 2 元",
+          "rows": [
+            {
+              "label": "全年洗衣",
+              "value": "18,000 筒"
+            },
+            {
+              "label": "年收入减少",
+              "value": "36,000 元"
+            },
+            {
+              "label": "降价后税前利润",
+              "value": "21,600 元"
+            }
+          ],
+          "note": "每天仍为 50 筒；成本和烘干比例不变"
+        }
+      ]
+    },
+    {
+      "id": "L26",
+      "chapter": "05 / 最容易变的，是客流",
+      "text": "烘干比例也会改变结果。如果每十筒只带来四次烘干，洗衣仍是每天五十筒，年利润降到三万二千四。所以不能只盯洗衣订单，还要看顾客到底买了什么。",
+      "shots": [
+        {
+          "image": "images/sunny.png",
+          "layout": "split",
+          "heading": "烘干用得少，账也会变",
+          "metric": "32,400 元",
+          "detail": "烘干比例由 60% 降至 40%"
+        },
+        {
+          "layout": "scene",
+          "image": "images/transfer.png",
+          "heading": "收入组合，比单一订单数更完整"
+        }
+      ]
+    },
+    {
+      "id": "L27",
+      "chapter": "05 / 最容易变的，是客流",
+      "text": "还要把季节放进去。假设半年每天五十筒，另外半年只有三十筒，平均就是四十筒，年利润还是一万零八十。不能拿一个下雨的周末，代表全年三百六十天。",
+      "shots": [
+        {
+          "image": "images/rainy.png",
+          "layout": "scene",
+          "heading": "旺季一周，不能乘成全年",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "两个季节，同一本账",
+          "rows": [
+            {
+              "label": "180 天 × 50 筒",
+              "value": "9,000 筒"
+            },
+            {
+              "label": "180 天 × 30 筒",
+              "value": "5,400 筒"
+            },
+            {
+              "label": "年均每日洗衣",
+              "value": "40 筒"
+            },
+            {
+              "label": "年度税前利润",
+              "value": "10,080 元"
+            }
+          ],
+          "note": "金额均为演示假设 · 人民币"
+        }
+      ]
+    },
+    {
+      "id": "L28",
+      "chapter": "06 / 哪些经营细节会改变账",
+      "text": "看到高峰排队，也别立刻添机器。先看排队持续多久，顾客是否真的流失，闲时又空多少。扩容会多一笔投入，只有新增订单带来的贡献，才能替这笔投入买单。",
+      "shots": [
+        {
+          "image": "images/queue.png",
+          "layout": "scene",
+          "heading": "排队以后，先看全年利用率",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "scene",
+          "image": "images/machines-v2.png",
+          "heading": "增加设备，也增加资本占用"
+        }
+      ],
+      "audio_edit": {
+        "end_seconds": 16.25,
+        "cache_fingerprint": "daaec60f739e66e438705e9f",
+        "reason": "原段落读完后出现额外语音；按 ASR 测得的完整正文结束点后保留短尾音。剪辑点对应变速前音频。"
+      }
+    },
+    {
+      "id": "L29",
+      "chapter": "06 / 哪些经营细节会改变账",
+      "text": "选址要看顾客提着衣服怎么来，附近已有谁在提供同样服务，以及房子的配套是否适合。人流相似的两条街，实际订单可能不同。房租和客流必须成对比较。",
+      "shots": [
+        {
+          "image": "images/location.png",
+          "layout": "scene",
+          "heading": "选址，算的是需求与成本的组合",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "scene",
+          "image": "images/lease.png",
+          "heading": "低房租与真实客流，一起看"
+        }
+      ]
+    },
+    {
+      "id": "L30",
+      "chapter": "06 / 哪些经营细节会改变账",
+      "text": "故障损失也不只有维修单。机器停着，原本会来的订单可能去了别处。日常维护和服务响应做不好，纸上稳定的五十筒，也可能慢慢往四十筒掉。",
+      "shots": [
+        {
+          "image": "images/repair.png",
+          "layout": "scene",
+          "heading": "故障的成本，还包括丢掉的订单",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "scene",
+          "image": "images/quiet.png",
+          "heading": "稳定客流，需要日常维护"
+        }
+      ]
+    },
+    {
+      "id": "L31",
+      "chapter": "06 / 哪些经营细节会改变账",
+      "text": "再看充值。顾客今天充了钱，不代表你今天已经完成了全部服务。未来洗衣的成本还在，退款也可能发生。不能把储值到账直接当成当期利润，再全部取走。",
+      "shots": [
+        {
+          "image": "images/phone.png",
+          "layout": "split",
+          "heading": "充值到账，先记清服务义务",
+          "metric": "到账 ≠ 利润",
+          "detail": "储值、消费与退款分别记录"
+        },
+        {
+          "layout": "table",
+          "heading": "这三笔记录，分开看",
+          "rows": [
+            {
+              "label": "充值",
+              "value": "收到预付款"
+            },
+            {
+              "label": "消费",
+              "value": "履行洗烘服务"
+            },
+            {
+              "label": "退款",
+              "value": "结算未消费余额"
+            }
+          ],
+          "note": "不要将全部储值到账当作当期利润"
+        }
+      ]
+    },
+    {
+      "id": "L32",
+      "chapter": "07 / 利润、现金与回本",
+      "text": "利润和现金也要分清。基准税前利润五万七千六，加回四万二折旧，是九万九千六。这只是简化的经营现金近似，还没扣所得税、设备更新和其他资金占用变化。",
+      "shots": [
+        {
+          "image": "images/ledger.png",
+          "layout": "scene",
+          "heading": "利润与现金，要分别看",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "简化现金桥接",
+          "rows": [
+            {
+              "label": "税前利润",
+              "value": "57,600"
+            },
+            {
+              "label": "加回非现金折旧",
+              "value": "42,000"
+            },
+            {
+              "label": "简化经营现金近似",
+              "value": "99,600"
+            }
+          ],
+          "note": "未扣所得税、更新投入与营运资金变化；无贷款"
+        }
+      ]
+    },
+    {
+      "id": "L33",
+      "chapter": "07 / 利润、现金与回本",
+      "text": "拿三十万初始现金除以这个近似值，静态看约三年。但这不是回本承诺。如果每天只有四十筒，同样简化算法已经接近六年；再遇更新支出，时间还会改变。",
+      "shots": [
+        {
+          "image": "images/keys.png",
+          "layout": "scene",
+          "heading": "静态回收期，只是一个条件计算",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "同样的投入，不同的客流",
+          "rows": [
+            {
+              "label": "50 筒 / 日",
+              "value": "约 3.0 年"
+            },
+            {
+              "label": "40 筒 / 日",
+              "value": "约 5.8 年"
+            }
+          ],
+          "note": "简化静态算法；未扣所得税、更新投入与资金占用变化"
+        }
+      ]
+    },
+    {
+      "id": "L34",
+      "chapter": "07 / 利润、现金与回本",
+      "text": "真正准备开店，先拿到四样东西：分程序成交价、淡旺季订单、完整场地报价、匹配机型的成本。把它们逐项替换假设，比搜索一句洗衣店利润有多高，更接近答案。",
+      "shots": [
+        {
+          "image": "images/receipt-v2.png",
+          "layout": "scene",
+          "heading": "让真实记录，逐项替换假设",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "把这四项带回账本",
+          "rows": [
+            {
+              "label": "收入",
+              "value": "分程序实际成交价"
+            },
+            {
+              "label": "需求",
+              "value": "淡旺季订单记录"
+            },
+            {
+              "label": "场地",
+              "value": "租赁与改造报价"
+            },
+            {
+              "label": "设备",
+              "value": "匹配机型的实际成本"
+            }
+          ],
+          "note": "资料核验清单；不是已经取得的案例数据"
+        }
+      ]
+    },
+    {
+      "id": "L35",
+      "chapter": "07 / 利润、现金与回本",
+      "text": "如果想开第二家，也先验证第一家的订单和维护能否复制。两家店意味着两处租金、两套设备和更多协调。数量增加，不会自动把一个没打平的模型变赚钱。",
+      "shots": [
+        {
+          "image": "images/storefront.png",
+          "layout": "scene",
+          "heading": "开第二家之前，先验证第一家",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "scene",
+          "image": "images/cleaning.png",
+          "heading": "复制门店，也要复制运营能力"
+        }
+      ]
+    },
+    {
+      "id": "L36",
+      "chapter": "07 / 利润、现金与回本",
+      "text": "所以，一家自助洗烘店一年能赚多少？在这组假设里，五十筒赚五万七千六，三十筒亏三万七千四百四十。机器负责把衣服洗干净。你要负责的，是让真实需求撑得住整本账。",
+      "shots": [
+        {
+          "image": "images/loading.png",
+          "layout": "scene",
+          "heading": "回到最初那个问题",
+          "metric": "",
+          "detail": ""
+        },
+        {
+          "layout": "table",
+          "heading": "所有结果，都带着条件",
+          "rows": [
+            {
+              "label": "50 筒 / 日",
+              "value": "+57,600 元 / 年"
+            },
+            {
+              "label": "40 筒 / 日",
+              "value": "+10,080 元 / 年"
+            },
+            {
+              "label": "30 筒 / 日",
+              "value": "−37,440 元 / 年"
+            }
+          ],
+          "note": "情景测算 · 含店主劳动与折旧 · 税前 · 无贷款"
+        }
+      ]
+    }
+  ]
+}

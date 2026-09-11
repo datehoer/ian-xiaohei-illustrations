@@ -8,13 +8,15 @@
 
 修订源文件在 `examples/video/laundromat-dense-pilot-v2/`，输出在 `outputs/laundromat-dense-pilot-v2/`。沿用第一版的 23 个切点、原配音、字幕和账本。12 张插画使用同一店内画风参考，统一设备造型、暖白/灰绿/橙色、简化轮廓与阴影；7 张程序图解沿用原有准确比例，背景调整到本片暖白色。
 
+2026-09-11 后续反馈要求去掉约 54 秒店铺画面的“客流 · 成交价 · 房租”和全片左上角“社区店 · 演示假设”。最新源清单已按此精简，`disclosure` 显式设为空字符串以关闭角标。最新输出另存为 `outputs/laundromat-dense-pilot-v2-clean/short/video.mp4`；原带标注修订版及其对比片保留。原口播、字幕和来源中的假设说明仍在。
+
 开场与假设边界改为衣篮、笔记本，利润与结尾改为账目静物，去掉四个大幅主持人式人物镜头。只在使用机器和清洁场景保留人物，共 2 镜、4.7 秒。这个比例是本次内容的结果，不作为后续视频配额。原始生成图和针对人物大小的修正记录保存在 `generation-record.json`。
 
 复现修订版：
 
 ```bash
 .venv/bin/python examples/video/laundromat-dense-pilot-v2/author.py
-.venv/bin/python scripts/episode_video.py render --editions short --output outputs/laundromat-dense-pilot-v2
+.venv/bin/python scripts/episode_video.py render --editions short --output outputs/laundromat-dense-pilot-v2-clean
 ```
 
 成片 `short/video.mp4` 和与上一试片的 `comparison.mp4` 另存。修订版仍待用户判断效果，不能因技术检查通过就替代旧确认版。

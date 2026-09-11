@@ -3,7 +3,7 @@
   "title": "一家自助洗烘店，一年到底能赚多少？",
   "series_label": "拥有一门生意 / 自助洗烘店",
   "asr_hint": "简体中文。自助洗烘店，洗衣，烘干，贡献毛利，税前利润，折旧。",
-  "disclosure": "社区店 · 演示假设",
+  "disclosure": "",
   "tts": {
     "voice": "白桦",
     "style": "用自然清晰的普通话讲解，像和朋友认真算账。语速中等偏利落，句间短停顿，数字清楚，不拖长句尾，不要播音腔。"
@@ -665,16 +665,7 @@
           "image": "images/storefront.png",
           "at_seconds": 2.82,
           "heading": "回到真实门店",
-          "labels": [
-            {
-              "text": "客流 · 成交价 · 房租",
-              "x": 0.5,
-              "y": 0.19,
-              "size": 72,
-              "color": "#263830",
-              "background": "#FEFDF9"
-            }
-          ],
+          "labels": [],
           "character_present": false,
           "core_idea": "回到真实门店"
         },
@@ -706,6 +697,6 @@
     }
   ],
   "profile": "dense-illustrated-static-v1",
-  "revision": "style-consistency-v2",
+  "revision": "style-consistency-v2-clean",
   "status": "visual-trial-awaiting-feedback"
 }

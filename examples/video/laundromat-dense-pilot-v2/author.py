@@ -11,7 +11,7 @@ HERE=Path(__file__).resolve().parent
 REPO=HERE.parents[2]
 BASE=REPO/'examples/video/laundromat-v2'
 OLD=REPO/'outputs/laundromat-v2/short'
-OUT=REPO/'outputs/laundromat-dense-pilot-v2/short'
+OUT=REPO/'outputs/laundromat-dense-pilot-v2-clean/short'
 INK='#263830';GREEN='#2F7166';ORANGE='#CF7135';RED='#B44B43';PAPER='#FAF4E8'
 
 def write(p,data):
@@ -91,7 +91,7 @@ def main():
     (HERE/'images').mkdir(exist_ok=True);OUT.mkdir(parents=True,exist_ok=True)
     charts()
     m=json.loads((BASE/'short.json').read_text())
-    m.update(profile='dense-illustrated-static-v1',revision='style-consistency-v2',disclosure='社区店 · 演示假设',status='visual-trial-awaiting-feedback')
+    m.update(profile='dense-illustrated-static-v1',revision='style-consistency-v2-clean',disclosure='',status='visual-trial-awaiting-feedback')
     plans=[
         [shot('storefront',0,'进入社区洗烘店'),
          shot('intake',4,'从一筒衣服开始算账',[label('一年能剩多少？',.25,.39,72),label('跟着一筒衣服算',.25,.53,42,color=GREEN)])],
@@ -114,7 +114,7 @@ def main():
         [shot('threshold',0,'找出盈亏平衡位置',[label('先找到打平的门槛',.5,.24,78),label('亏损',.24,.68,42,color=RED),label('盈利',.76,.68,42,color=GREEN)]),
          shot('threshold',2.5,'每天约三十八筒',[label('约 38 筒 / 日',.5,.26,110,color=ORANGE),label('价格与烘干比例保持不变',.5,.40,40),label('20',.14,.66,36),label('30',.32,.66,36),label('38',.464,.66,44,color=ORANGE),label('50',.68,.66,36),label('60',.86,.66,36)])],
         [shot('intake',0,'强调假设边界',[label('这是一组假设',.25,.37,74),label('不是行业均值',.25,.53,48,color=RED)]),
-         shot('storefront',2.82,'回到真实门店',[label('客流 · 成交价 · 房租',.5,.19,72,background='#FEFDF9')]),
+         shot('storefront',2.82,'回到真实门店'),
          shot('ledger',6.0,'真实条件决定结果',[label('最后剩多少',.24,.37,88),label('由真实门店条件决定',.24,.53,42,color=GREEN)])],
     ]
     for b,shots in zip(m['blocks'],plans):

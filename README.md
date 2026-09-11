@@ -106,11 +106,27 @@ python3 scripts/quick_validate.py .
 
 检查覆盖目录结构、任务路由、文档本地链接、角色参考资产、上游样例画幅和明显未完成标记；视觉质量、角色连续性和引线指向仍需生成后目视检查。
 
+## 从口播到视频
+
+现已提供 MiMo TTS 与本地视频合成程序，输出 1920×1080、30fps MP4、独立 WAV、SRT 字幕和实测时间轴。图片由配图 Skill 调用内置图像工具生成，再通过显式镜头清单交给合成器。
+
+流程与项目分析见 [docs/video-pipeline.md](docs/video-pipeline.md)。可运行的结构示例是 [最小假设账本示例](examples/minimal-video/manifest.json)，其中数字均为演示假设。
+
+新版已制作约 1 分钟短片和 9 分 57 秒详细片，支持多镜头、三种画面布局和按语音时间戳对齐的字幕。使用方式见 [多镜头视频 v2](docs/video-v2.md)，每期经营假设、来源与完整素材保存于仓库外，见 [素材管理](docs/material-storage.md)。
+
+用户已确认的默认方案为 `corgi-narrated-static-v1`：柯基、静态镜头、独立简体字幕与 MiMo 旁白。[复刻与保存说明](docs/video-replication.md) 给出下一期调用方法、目录结构和备份范围；完整制作规则在 Skill 的 [视频制作参考](ian-xiaohei-illustrations/references/video-production.md)。
+
+```bash
+python3 scripts/narrated_video.py examples/minimal-video/manifest.json --output outputs/laundromat-pilot
+```
+
+需要 FFmpeg、中文字体和 `requirements-video.txt` 中的 Pillow。密钥通过 `MIMO_API_KEY` 或运行时隐藏输入提供；不要把真实密钥写入清单或代码。已有音频时加 `--offline` 可无网络重做排版。
+
 ## 另一个 Skill：Economics of Owning（口播稿）
 
 本仓库同时打包 [economics-of-owning](economics-of-owning/)：一个独立的口播稿 skill，用 The Economics of Owning a X 无脸财经解说格式写脚本、选题、标题、单位锚点和年账（拥有一家洗衣店/咖啡馆/洗车店的经济学等）。它不是小黑配图 skill 的组件，而是配图的上游：先出稿，再配图。
 
-稿子产出里的 `[画面]` 镜头提示交给本仓库的 `ian-xiaohei-illustrations` 出图，配图密度按其中的「口播视频配图密度规则」执行（总张数 ≈ 时长分钟×1.5~2、分段配额下限、卡型标注、悬空拦截）。
+稿子产出里的 `[画面]` 镜头提示交给本仓库的 `ian-xiaohei-illustrations` 出图。沿用确认版时，按其视频制作方案安排约 1 分钟短片和约 10 分钟长片，分别统计镜头数和独立配图数；普通配图任务另按通用密度建议执行。
 
 安装（复制到 skills 目录）：
 
@@ -131,21 +147,21 @@ cp -R ./economics-of-owning "${CODEX_HOME:-$HOME/.codex}/skills/"
 <details>
 <summary>展开原版示例</summary>
 
-![两个断点](examples/images/01-two-breakpoints.png)
+![两个断点](ian-xiaohei-illustrations/assets/examples/01-two-breakpoints.png)
 
-![按目的分拣](examples/images/02-sort-by-purpose.png)
+![按目的分拣](ian-xiaohei-illustrations/assets/examples/03-sort-by-purpose.png)
 
-![一鱼多吃](examples/images/03-one-fish-many-uses.png)
+![一鱼多吃](ian-xiaohei-illustrations/assets/examples/04-one-fish-many-uses.png)
 
-![承接路径](examples/images/04-handoff-path.png)
+![承接路径](ian-xiaohei-illustrations/assets/examples/05-handoff-path.png)
 
-![信息井](examples/images/05-information-well.png)
+![信息井](ian-xiaohei-illustrations/assets/examples/10-information-well.png)
 
-![想法压机](examples/images/06-idea-press.png)
+![想法压机](ian-xiaohei-illustrations/assets/examples/11-idea-press.png)
 
-![内容发酵](examples/images/07-content-fermentation.png)
+![内容发酵](ian-xiaohei-illustrations/assets/examples/12-content-fermentation.png)
 
-![信任桥](examples/images/08-trust-bridge.png)
+![信任桥](ian-xiaohei-illustrations/assets/examples/14-trust-bridge.png)
 
 </details>
 

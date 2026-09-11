@@ -3,7 +3,7 @@ Thumbs.db
 
 # Local generated outputs
 generated/
-outputs/
+/outputs
 dist/
 
 # Local editor files
@@ -12,3 +12,15 @@ dist/
 
 # Logs
 *.log
+
+# Credentials and local runtime
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+work/install-audit/
+
+# Episode source material lives outside the repository
+/examples/video
+/episodes/

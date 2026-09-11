@@ -10,6 +10,7 @@ Generate one standalone illustration for a Chinese narrated explainer.
 Reference roles:
 {Identify each supplied image as character reference, style reference, composition reference or edit target.}
 Preserve the selected character's identity and the selected linework.
+{When the episode has its own selected style anchor, use that for linework, shading and detail density; use the character reference for identity only.}
 The reference's props, text, pose and scene are not part of its identity.
 {If no character appears in this shot, omit the character reference and identity instructions.}
 
@@ -44,6 +45,8 @@ Keep the main action readable at video scale. No unrequested titles, watermarks 
 柯基的身份与参考图从 [角色档案](characters/corgi-minimal.md) 读取，不在通用模板里硬编码身体或道具。标注的颜色与类别见 [annotations.md](annotations.md)。
 
 ## 引线编辑示例
+
+密集视频先选构图，再写提示词：完整环境写明 full-frame / edge-to-edge；物件特写指定主体与后期标注各自区域；机制镜头写明实际流向和步骤。无人物镜头明确不出现人物或动物，省略角色身份参考。字幕安全区指关键内容避让，不自动要求一整条白带，更不在输出时再次给已有留白缩图。
 
 ```text
 Edit the provided image. Change only the leader line belonging to “{label}”.

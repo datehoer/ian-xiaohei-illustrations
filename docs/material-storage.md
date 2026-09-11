@@ -8,12 +8,17 @@ Git 保存两个 Skill、程序、依赖、测试、制作规范、必要角色�
 /Volumes/MachineU1/github_work/ian-xiaohei-video-projects/
   examples/video/laundromat/
   examples/video/laundromat-v2/
+  examples/video/laundromat-dense-pilot/
+  examples/video/laundromat-dense-pilot-v2/
   examples/video/song-pawnshop/
   outputs/
+  branch-archives/
 ```
 
 原仓库的 `examples/video` 和 `outputs` 是指向素材目录的本地软链接，已被忽略；它们不随 clone 分发。这样旧作者脚本与绝对路径时间轴仍能使用。换电脑时恢复完整素材目录，再按需建立这两个链接，或在命令中显式传入外部清单及输出目录。保留 examples/video 与 outputs 的相对层级，避免旧清单和时间轴失效。
 
 新一期继续放在素材目录的 examples/video 下，输出放在同一素材根目录的 outputs 下。不要把每期材料放进最小示例目录。
+
+合并 `codex/illustrated-video-pilot` 时，两套密集试片的源文件已补存到上述目录，并逐文件与分支核对。原分支的历史交接说明与素材哈希清单保存在 `branch-archives/illustrated-video-pilot-11e9667/`；其中关于分支、推送和存储位置的描述只代表当时状态。当前制作规则以仓库文档为准。
 
 素材目录需要单独备份到其他设备或存储服务；移出仓库本身不是备份。至少保存源稿、图片、原始 TTS 缓存、旁白、字幕、时间轴、确认记录和已确认 MP4。模型与中间渲染缓存可以重建。

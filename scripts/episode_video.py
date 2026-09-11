@@ -41,7 +41,14 @@ def validate_v2(m, root, images=False):
         if not b.get('text','').strip() or re.search(r'\[(画面|停)',b['text']):raise ValueError('需要纯口播')
         if not b.get('shots'):raise ValueError('每段至少一个镜头')
         for s in b['shots']:
-            if s.get('layout') not in ('scene','split','table'):raise ValueError('未知画面布局')
+            if s.get('layout') not in ('scene','split','table','full'):raise ValueError('未知画面布局')
+            if 'at_seconds' in s and (not isinstance(s['at_seconds'],(int,float)) or not math.isfinite(s['at_seconds']) or s['at_seconds']<0):
+                raise ValueError('镜头切点需要有限的非负秒数')
+            for label in s.get('labels',[]):
+                if not label.get('text') or any(not isinstance(label.get(k),(int,float)) or not 0<=label[k]<=1 for k in ('x','y')):
+                    raise ValueError('标注需要文字与 0–1 的 x/y 坐标')
+                if label.get('anchor','mm') not in ('mm','lm','rm') or not 18<=label.get('size',64)<=200:
+                    raise ValueError('标注字号或锚点无效')
             if s['layout']=='table':
                 if not 1<=len(s.get('rows',[]))<=6:raise ValueError('数据画面需要 1–6 行')
             elif not s.get('image') or (images and not (root/s['image']).is_file()):
@@ -205,7 +212,34 @@ def align(output, editions, model_name='small'):
         save(directory/'captions.json',captions);save(directory/'alignment-audit.json',audit)
         (directory/'subtitles.srt').write_text('\n'.join(f"{i+1}\n{timestamp(c['start_frame']/FPS)} --> {timestamp(c['end_frame']/FPS)}\n{c['text']}\n" for i,c in enumerate(captions)))
 
+def full_typography(m,shot,caption,path):
+    """Position editable callouts over full-frame artwork without a page template."""
+    from PIL import Image,ImageDraw,ImageFont
+    layer=Image.new('RGBA',(1920,1080),(0,0,0,0));d=ImageDraw.Draw(layer)
+    font=font_path(m);face=font_index(m)
+    def label(s,x,y,size=64,color='#253230',anchor='mm',background=None):
+        f=ImageFont.truetype(font,int(size),index=face)
+        box=d.textbbox((x,y),s,font=f,anchor=anchor)
+        if box[0]<24 or box[2]>1896 or box[1]<12 or box[3]>1050:
+            raise ValueError(f'全屏标注越界：{s}')
+        if background:
+            d.rounded_rectangle((box[0]-18,box[1]-12,box[2]+18,box[3]+12),radius=12,fill=background)
+        d.text((x,y),s,font=f,fill=color,anchor=anchor)
+    disclosure=m.get('disclosure','情景测算')
+    if disclosure:label(disclosure,70,48,24,'#515D58','lm',(255,255,255,225))
+    for item in shot.get('labels',[]):
+        label(str(item['text']),round(item['x']*1920),round(item['y']*1080),item.get('size',64),item.get('color','#253230'),item.get('anchor','mm'),item.get('background'))
+    f=ImageFont.truetype(font,46,index=face);lines=[];line=''
+    for ch in caption:
+        if d.textlength(line+ch,font=f)>1690:lines.append(line);line=''
+        line+=ch
+    if line:lines.append(line)
+    if len(lines)>2:raise ValueError('字幕超出安全区')
+    for i,s in enumerate(lines):label(s,960,987-(len(lines)-1)*58+i*58,46,'#202A26','mm',(255,255,255,238))
+    layer.save(path)
+
 def typography(m,b,shot,caption,path,progress):
+    if shot['layout']=='full':return full_typography(m,shot,caption,path)
     # Draw editable text/data only. Generated artwork is composited by FFmpeg.
     from PIL import Image,ImageDraw,ImageFont
     layer=Image.new('RGBA',(1920,1080),(0,0,0,0));d=ImageDraw.Draw(layer);font=font_path(m);face=font_index(m)
@@ -256,9 +290,20 @@ def shot_timeline(blocks):
     for b in blocks:
         # Explicit cuts can be tied to narration phrases; default at caption boundaries.
         count=len(b['shots'])
+        explicit=any('at_seconds' in s for s in b['shots'])
+        if explicit and not all('at_seconds' in s for s in b['shots']):
+            raise ValueError('同一段的镜头必须全部指定切点，或全部自动分配')
+        if explicit:
+            times=[s['at_seconds'] for s in b['shots']]
+            if any(not isinstance(t,(int,float)) or not math.isfinite(t) or t<0 for t in times):
+                raise ValueError('镜头切点需要有限的非负秒数')
+            starts=[round(t*FPS) for t in times]
+            if starts[0]!=0 or any(a>=z for a,z in zip(starts,starts[1:])) or starts[-1]>=b['frames']:
+                raise ValueError('镜头切点必须从零开始、严格递增并位于本段音频内')
+        else:starts=[round(b['frames']*i/count) for i in range(count)]
         for i,s in enumerate(b['shots']):
-            start=b['start_frame']+round(b['frames']*i/count)
-            end=b['start_frame']+round(b['frames']*(i+1)/count)
+            start=b['start_frame']+starts[i]
+            end=b['start_frame']+(starts[i+1] if i+1<count else b['frames'])
             result.append({**s,'id':f"{b['id']}-{i+1}",'block_id':b['id'],'start_frame':start,'end_frame':end})
     return result
 
@@ -273,7 +318,7 @@ def render(output, edition, workers=3):
     shots=shot_timeline(audio['blocks']);total=sum(b['frames'] for b in audio['blocks'])
     # Align visual midpoint cuts to the closest subtitle boundary within that paragraph.
     for i,s in enumerate(shots):
-        if i and shots[i-1]['block_id']==s['block_id']:
+        if i and shots[i-1]['block_id']==s['block_id'] and 'at_seconds' not in s:
             candidates=[c['start_frame'] for c in captions if c['block_id']==s['block_id'] and c['start_frame']>shots[i-1]['start_frame']+FPS and c['start_frame']<s['end_frame']-FPS]
             if candidates:
                 cut=min(candidates,key=lambda t:abs(t-s['start_frame']));shots[i-1]['end_frame']=cut;s['start_frame']=cut
@@ -289,7 +334,7 @@ def render(output, edition, workers=3):
     def part_job(index,part):
         start,end,s,b,caption=part;frames=end-start
         overlay=render_dir/f'{index:04d}-text.png';clip=render_dir/f'{index:04d}.mp4';stamp=render_dir/f'{index:04d}.sha'
-        spec={'part':part,'series_label':m.get('series_label'),'disclosure':m.get('disclosure'),'font':font_path(m),'font_index':font_index(m),'renderer':9}
+        spec={'part':part,'series_label':m.get('series_label'),'disclosure':m.get('disclosure'),'font':font_path(m),'font_index':font_index(m),'renderer':10}
         if s.get('image'):spec['image_hash']=hashlib.sha256((root/s['image']).read_bytes()).hexdigest()
         digest=hashlib.sha256(json.dumps(spec,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
         if clip.exists() and stamp.exists() and stamp.read_text()==digest:return clip
@@ -299,6 +344,8 @@ def render(output, edition, workers=3):
         else:cmd+=['-loop','1','-framerate','30','-i',str(root/s['image'])]
         cmd+=['-loop','1','-framerate','30','-i',str(overlay)]
         if s['layout']=='table':base='[0:v]setsar=1[bg];'
+        elif s['layout']=='full':
+            base='[0:v]scale=1920:1080:force_original_aspect_ratio=increase:flags=lanczos,crop=1920:1080,setsar=1[bg];'
         else:
             if s['layout']=='split':w,h,x,y=1040,584,28,270
             else:w,h,x,y=1280,720,320,230

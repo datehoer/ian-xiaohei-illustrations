@@ -22,6 +22,7 @@ REQUIRED_SKILL_FILES = [
     "references/prompt-template.md",
     "references/qa-checklist.md",
     "references/video-production.md",
+    "references/dense-illustrated-video.md",
     "references/character-design.md",
     "references/annotations.md",
     "references/characters/corgi-minimal.md",

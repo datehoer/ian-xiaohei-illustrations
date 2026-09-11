@@ -5,7 +5,7 @@ import tempfile
 from decimal import Decimal as D
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from episode_video import align_text, caption_chunks, int_chinese, normal, shot_timeline, timeline_path, validate_v2
+from episode_video import align_text, caption_chunks, int_chinese, normal, shot_timeline, timeline_path, validate_v2, full_typography
 from narrated_video import font_index
 
 class EpisodeTests(unittest.TestCase):
@@ -87,6 +87,30 @@ class EpisodeTests(unittest.TestCase):
         m={'schema_version':2,'blocks':[{'id':'a','text':'正文','shots':[{'layout':'scene','image':'absent.png'}]}]}
         validate_v2(m,Path('/missing'),images=False)
         with self.assertRaises(ValueError):validate_v2(m,Path('/missing'),images=True)
+
+    def test_explicit_cuts_follow_narration_and_cover_the_block(self):
+        shots=shot_timeline([{'id':'a','start_frame':150,'frames':270,'shots':[
+            {'layout':'full','at_seconds':0},{'layout':'full','at_seconds':1.74},{'layout':'full','at_seconds':6.2}]}])
+        self.assertEqual([(s['start_frame'],s['end_frame']) for s in shots],[(150,202),(202,336),(336,420)])
+
+    def test_invalid_or_collapsed_explicit_cuts_fail_before_rendering(self):
+        for times in ([1,2],[0,2,1],[0,9],[0,.001],[0,float('nan')],[0,-1]):
+            with self.subTest(times=times),self.assertRaises(ValueError):
+                shot_timeline([{'id':'a','start_frame':0,'frames':270,'shots':[{'at_seconds':t} for t in times]}])
+        with self.assertRaises(ValueError):
+            shot_timeline([{'id':'a','start_frame':0,'frames':270,'shots':[{'at_seconds':0},{}]}])
+
+    @unittest.skipUnless(Path('/System/Library/Fonts/STHeiti Medium.ttc').exists(), 'macOS font regression')
+    def test_full_frame_overlay_leaves_artwork_visible_and_rejects_clipped_text(self):
+        from PIL import Image
+        with tempfile.TemporaryDirectory() as directory:
+            output=Path(directory)/'layer.png'
+            full_typography({'disclosure':'演示假设'},{'labels':[{'text':'12 元','x':.2,'y':.5,'size':96}]},'洗一次十二元。',output)
+            with Image.open(output) as im:
+                self.assertEqual(im.getpixel((1500,400))[3],0)
+                self.assertGreater(im.getpixel((960,987))[3],0)
+            with self.assertRaises(ValueError):
+                full_typography({}, {'labels':[{'text':'这个文字不能超出画面','x':.99,'y':.5,'size':96}]},'',output)
 
     def test_wash_dry_ledger_and_sensitivities(self):
         fixed=72000+48000+18000+42000

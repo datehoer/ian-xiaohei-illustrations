@@ -18,6 +18,8 @@ This fork is maintained at <https://github.com/datehoer/ian-xiaohei-illustration
 
 The fork adds separate character-design and content-illustration modes within one skill, a reusable corgi identity profile and reference image, video shot planning, and explicit rules for callout endpoints, flow arrows, side notes, and source notes. The corgi reference was generated for this adaptation from a user-provided reference; the source photograph or avatar is not bundled.
 
+This repository also bundles `economics-of-owning/`, an original companion skill for writing "Economics of Owning a X" narrated scripts; it is not an adaptation of any upstream work.
+
 ### References consulted
 
 - **Ian Xiaohei Illustrations**, Ian: <https://github.com/helloianneo/ian-xiaohei-illustrations/tree/91b560849e8f883922cc2fa8a358a668caa94105>. This adaptation builds on the datehoer fork at `e56584d859c0557f174769366a099f3dc2dd9560`, preserving its task routing and structural validator. Original MIT terms are in [LICENSE](LICENSE).

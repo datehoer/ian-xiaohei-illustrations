@@ -83,6 +83,10 @@ class Validator:
             self.require_file(relative)
         self.require_dir(SKILL_DIR)
         self.require_file("scripts/quick_validate.py")
+        # Second bundled skill: economics-of-owning script writer.
+        self.require_file("economics-of-owning/SKILL.md")
+        self.require_file("economics-of-owning/references/beat-sheet.md")
+        self.require_file("economics-of-owning/references/numbers.md")
 
     def validate_skill_files(self) -> None:
         for relative in REQUIRED_SKILL_FILES:

@@ -8,6 +8,9 @@
 - Updated agent metadata, prompt examples, installation instructions, and source notices for this fork; bundled license notices with the installable skill.
 - Extended structural validation to cover the new references, character PNG, and local Markdown links, including graceful reporting of missing or malformed assets.
 
+- Added video illustration density rules (≈ minutes × 1.5–2 unique images, per-segment minimum quotas, card-type labels, digit-dense sections get one card per row, reuse rules, and a dangling-`[画面]` guard) to `ian-xiaohei-illustrations/SKILL.md`.
+- Bundled `economics-of-owning/` as a second installable skill in this repository: an original script-writing companion (Economics of Owning a X format) whose `[画面]` beats render through `ian-xiaohei-illustrations` under the density rules.
+
 - Added `scripts/quick_validate.py` to check skill structure, required references, README image links, example image aspect ratios, changelog presence, and obvious draft markers.
 - Added task routing to `ian-xiaohei-illustrations/SKILL.md` so planning, generation, single-image, editing, and example-driven tasks read only the needed references.
 - Clarified the README example-image split between the public GitHub gallery and the installed skill calibration assets.

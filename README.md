@@ -106,6 +106,24 @@ python3 scripts/quick_validate.py .
 
 检查覆盖目录结构、任务路由、文档本地链接、角色参考资产、上游样例画幅和明显未完成标记；视觉质量、角色连续性和引线指向仍需生成后目视检查。
 
+## 另一个 Skill：Economics of Owning（口播稿）
+
+本仓库同时打包 [economics-of-owning](economics-of-owning/)：一个独立的口播稿 skill，用 The Economics of Owning a X 无脸财经解说格式写脚本、选题、标题、单位锚点和年账（拥有一家洗衣店/咖啡馆/洗车店的经济学等）。它不是小黑配图 skill 的组件，而是配图的上游：先出稿，再配图。
+
+稿子产出里的 `[画面]` 镜头提示交给本仓库的 `ian-xiaohei-illustrations` 出图，配图密度按其中的「口播视频配图密度规则」执行（总张数 ≈ 时长分钟×1.5~2、分段配额下限、卡型标注、悬空拦截）。
+
+安装（复制到 skills 目录）：
+
+```bash
+cp -R ./economics-of-owning "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
+
+包含内容：
+
+- [SKILL.md](economics-of-owning/SKILL.md)：骨架、文风铁律、工作流与换皮规则。
+- [references/beat-sheet.md](economics-of-owning/references/beat-sheet.md)：14 分钟时间轴、开场/锚点/年账公式。
+- [references/numbers.md](economics-of-owning/references/numbers.md)：数字口径与禁造假规则。
+
 ## 上游小黑校准样例
 
 下面 8 张来自 Ian 的原版，保留用于对照与可选小黑模式，当前默认角色以上方柯基参考为准。样图用于观察视觉语言，不要求复制旧物件、构图或隐喻。

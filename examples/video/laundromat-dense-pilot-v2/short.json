@@ -1,0 +1,711 @@
+{
+  "schema_version": 2,
+  "title": "一家自助洗烘店，一年到底能赚多少？",
+  "series_label": "拥有一门生意 / 自助洗烘店",
+  "asr_hint": "简体中文。自助洗烘店，洗衣，烘干，贡献毛利，税前利润，折旧。",
+  "disclosure": "社区店 · 演示假设",
+  "tts": {
+    "voice": "白桦",
+    "style": "用自然清晰的普通话讲解，像和朋友认真算账。语速中等偏利落，句间短停顿，数字清楚，不拖长句尾，不要播音腔。"
+  },
+  "fps": 30,
+  "source_date": "2026-09-11",
+  "edition": "short",
+  "blocks": [
+    {
+      "id": "S01",
+      "chapter": "一分钟看懂这本账",
+      "text": "一家自助洗烘店，一年赚多少？用一组社区店假设，算清楚。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/storefront.png",
+          "at_seconds": 0,
+          "heading": "进入社区洗烘店",
+          "labels": [],
+          "character_present": false,
+          "core_idea": "进入社区洗烘店"
+        },
+        {
+          "layout": "full",
+          "image": "images/intake.png",
+          "at_seconds": 4,
+          "heading": "从一筒衣服开始算账",
+          "labels": [
+            {
+              "text": "一年能剩多少？",
+              "x": 0.25,
+              "y": 0.39,
+              "size": 72,
+              "color": "#263830"
+            },
+            {
+              "text": "跟着一筒衣服算",
+              "x": 0.25,
+              "y": 0.53,
+              "size": 42,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "从一筒衣服开始算账"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "chapter": "一分钟看懂这本账",
+      "text": "洗一次十二元，烘一次十元。假设每十筒洗衣，带来六次烘干。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/washer.png",
+          "at_seconds": 0,
+          "heading": "洗衣成交价",
+          "labels": [
+            {
+              "text": "12 元",
+              "x": 0.22,
+              "y": 0.43,
+              "size": 94,
+              "color": "#CF7135",
+              "background": null
+            },
+            {
+              "text": "洗一次",
+              "x": 0.22,
+              "y": 0.58,
+              "size": 38,
+              "color": "#CF7135"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "洗衣成交价"
+        },
+        {
+          "layout": "full",
+          "image": "images/dryer.png",
+          "at_seconds": 1.74,
+          "heading": "烘干成交价",
+          "labels": [
+            {
+              "text": "10 元",
+              "x": 0.22,
+              "y": 0.43,
+              "size": 94,
+              "color": "#CF7135",
+              "background": null
+            },
+            {
+              "text": "烘一次",
+              "x": 0.22,
+              "y": 0.58,
+              "size": 38,
+              "color": "#CF7135"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "烘干成交价"
+        },
+        {
+          "layout": "full",
+          "image": "images/attach.png",
+          "at_seconds": 4.12,
+          "heading": "洗衣与烘干组合",
+          "labels": [
+            {
+              "text": "10 次洗衣",
+              "x": 0.265,
+              "y": 0.22,
+              "size": 70,
+              "color": "#263830"
+            },
+            {
+              "text": "6 次烘干",
+              "x": 0.755,
+              "y": 0.22,
+              "size": 70,
+              "color": "#263830"
+            },
+            {
+              "text": "平均烘干比例 60%",
+              "x": 0.5,
+              "y": 0.77,
+              "size": 48,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "洗衣与烘干组合"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "chapter": "一分钟看懂这本账",
+      "text": "平均每筒洗衣，贡献十八元收入。扣掉四块八变动成本，剩十三块二。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/income.png",
+          "at_seconds": 0,
+          "heading": "组合收入",
+          "labels": [
+            {
+              "text": "18 元",
+              "x": 0.5,
+              "y": 0.22,
+              "size": 120,
+              "color": "#263830"
+            },
+            {
+              "text": "每次洗衣及平均带来的烘干",
+              "x": 0.5,
+              "y": 0.73,
+              "size": 46,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "组合收入"
+        },
+        {
+          "layout": "full",
+          "image": "images/costs.png",
+          "at_seconds": 3.98,
+          "heading": "扣变动成本",
+          "labels": [
+            {
+              "text": "−4.8 元",
+              "x": 0.22,
+              "y": 0.43,
+              "size": 94,
+              "color": "#B44B43",
+              "background": null
+            },
+            {
+              "text": "能源 · 耗材 · 交易费用",
+              "x": 0.22,
+              "y": 0.58,
+              "size": 38,
+              "color": "#B44B43"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "扣变动成本"
+        },
+        {
+          "layout": "full",
+          "image": "images/contribution.png",
+          "at_seconds": 6.2,
+          "heading": "剩下的是贡献毛利",
+          "labels": [
+            {
+              "text": "18 − 4.8 = 13.2 元",
+              "x": 0.5,
+              "y": 0.26,
+              "size": 100,
+              "color": "#263830"
+            },
+            {
+              "text": "变动成本",
+              "x": 0.215,
+              "y": 0.69,
+              "size": 40,
+              "color": "#B44B43"
+            },
+            {
+              "text": "贡献毛利，尚需承担固定开支",
+              "x": 0.62,
+              "y": 0.69,
+              "size": 40,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "剩下的是贡献毛利"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "chapter": "一分钟看懂这本账",
+      "text": "每天洗五十筒，一年营业三百六十天，全年贡献二十三万七千六。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/busy.png",
+          "at_seconds": 0,
+          "heading": "每日订单假设",
+          "labels": [
+            {
+              "text": "50 筒 / 日",
+              "x": 0.5,
+              "y": 0.19,
+              "size": 92,
+              "color": "#263830",
+              "background": "#FEFDF9"
+            }
+          ],
+          "character_present": true,
+          "core_idea": "每日订单假设"
+        },
+        {
+          "layout": "full",
+          "image": "images/calendar.png",
+          "at_seconds": 1.94,
+          "heading": "全年营业天数",
+          "labels": [
+            {
+              "text": "360 天",
+              "x": 0.5,
+              "y": 0.46,
+              "size": 120,
+              "color": "#263830"
+            },
+            {
+              "text": "每年营业",
+              "x": 0.5,
+              "y": 0.72,
+              "size": 44,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "全年营业天数"
+        },
+        {
+          "layout": "full",
+          "image": "images/year.png",
+          "at_seconds": 4.52,
+          "heading": "全年贡献",
+          "labels": [
+            {
+              "text": "237,600 元",
+              "x": 0.5,
+              "y": 0.25,
+              "size": 130,
+              "color": "#263830"
+            },
+            {
+              "text": "年度贡献毛利",
+              "x": 0.5,
+              "y": 0.4,
+              "size": 52,
+              "color": "#2F7166"
+            },
+            {
+              "text": "13.2 元 / 筒",
+              "x": 0.22,
+              "y": 0.52,
+              "size": 52,
+              "color": "#263830"
+            },
+            {
+              "text": "50 筒 / 日",
+              "x": 0.5,
+              "y": 0.52,
+              "size": 52,
+              "color": "#263830"
+            },
+            {
+              "text": "360 天",
+              "x": 0.78,
+              "y": 0.52,
+              "size": 52,
+              "color": "#263830"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "全年贡献"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "chapter": "一分钟看懂这本账",
+      "text": "再扣房租七万二，含店主劳动的人工四万八。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/rent.png",
+          "at_seconds": 0,
+          "heading": "租金仍然发生",
+          "labels": [
+            {
+              "text": "−72,000 元",
+              "x": 0.22,
+              "y": 0.43,
+              "size": 94,
+              "color": "#B44B43",
+              "background": "#FEFDF9"
+            },
+            {
+              "text": "年度房租",
+              "x": 0.22,
+              "y": 0.58,
+              "size": 38,
+              "color": "#B44B43"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "租金仍然发生"
+        },
+        {
+          "layout": "full",
+          "image": "images/cleaning.png",
+          "at_seconds": 2.38,
+          "heading": "店主劳动有成本",
+          "labels": [
+            {
+              "text": "−48,000 元",
+              "x": 0.2,
+              "y": 0.3,
+              "size": 94,
+              "color": "#B44B43"
+            },
+            {
+              "text": "人工 · 已计店主劳动",
+              "x": 0.2,
+              "y": 0.43,
+              "size": 38,
+              "color": "#B44B43"
+            }
+          ],
+          "character_present": true,
+          "core_idea": "店主劳动有成本"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "chapter": "一分钟看懂这本账",
+      "text": "其他运营一万八，折旧四万二。税前利润，剩五万七千六。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/tools.png",
+          "at_seconds": 0,
+          "heading": "其他运营成本",
+          "labels": [
+            {
+              "text": "−18,000 元",
+              "x": 0.22,
+              "y": 0.43,
+              "size": 94,
+              "color": "#B44B43",
+              "background": null
+            },
+            {
+              "text": "年度其他运营",
+              "x": 0.22,
+              "y": 0.58,
+              "size": 38,
+              "color": "#B44B43"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "其他运营成本"
+        },
+        {
+          "layout": "full",
+          "image": "images/wear.png",
+          "at_seconds": 2.1,
+          "heading": "折旧是年度损耗",
+          "labels": [
+            {
+              "text": "−42,000",
+              "x": 0.235,
+              "y": 0.3,
+              "size": 86,
+              "color": "#B44B43"
+            },
+            {
+              "text": "元 / 年 · 折旧",
+              "x": 0.235,
+              "y": 0.42,
+              "size": 38,
+              "color": "#263830"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "折旧是年度损耗"
+        },
+        {
+          "layout": "full",
+          "image": "images/ledger.png",
+          "at_seconds": 3.66,
+          "heading": "全年税前利润",
+          "labels": [
+            {
+              "text": "57,600 元",
+              "x": 0.22,
+              "y": 0.43,
+              "size": 94,
+              "color": "#2F7166",
+              "background": null
+            },
+            {
+              "text": "年度税前利润",
+              "x": 0.22,
+              "y": 0.58,
+              "size": 38,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "全年税前利润"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "chapter": "一分钟看懂这本账",
+      "text": "但每天只有三十筒，就会亏三万七千四百四十。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/empty.png",
+          "at_seconds": 0,
+          "heading": "订单下滑到三十筒",
+          "labels": [
+            {
+              "text": "30 筒 / 日",
+              "x": 0.205,
+              "y": 0.32,
+              "size": 92,
+              "color": "#263830"
+            },
+            {
+              "text": "同一家店，客流变少",
+              "x": 0.205,
+              "y": 0.45,
+              "size": 38,
+              "color": "#263830"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "订单下滑到三十筒"
+        },
+        {
+          "layout": "full",
+          "image": "images/loss.png",
+          "at_seconds": 2.1,
+          "heading": "同条件下盈亏反差",
+          "labels": [
+            {
+              "text": "50 筒 / 日",
+              "x": 0.16,
+              "y": 0.35,
+              "size": 48,
+              "color": "#263830"
+            },
+            {
+              "text": "+57,600 元",
+              "x": 0.73,
+              "y": 0.36,
+              "size": 72,
+              "color": "white"
+            },
+            {
+              "text": "30 筒 / 日",
+              "x": 0.16,
+              "y": 0.55,
+              "size": 48,
+              "color": "#263830"
+            },
+            {
+              "text": "−37,440 元",
+              "x": 0.74,
+              "y": 0.55,
+              "size": 82,
+              "color": "#B44B43"
+            },
+            {
+              "text": "年度税前结果 · 其他条件不变",
+              "x": 0.5,
+              "y": 0.78,
+              "size": 40,
+              "color": "#263830"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "同条件下盈亏反差"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "chapter": "一分钟看懂这本账",
+      "text": "同样条件下，平均每天约三十八筒，才能打平。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/threshold.png",
+          "at_seconds": 0,
+          "heading": "找出盈亏平衡位置",
+          "labels": [
+            {
+              "text": "先找到打平的门槛",
+              "x": 0.5,
+              "y": 0.24,
+              "size": 78,
+              "color": "#263830"
+            },
+            {
+              "text": "亏损",
+              "x": 0.24,
+              "y": 0.68,
+              "size": 42,
+              "color": "#B44B43"
+            },
+            {
+              "text": "盈利",
+              "x": 0.76,
+              "y": 0.68,
+              "size": 42,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "找出盈亏平衡位置"
+        },
+        {
+          "layout": "full",
+          "image": "images/threshold.png",
+          "at_seconds": 2.5,
+          "heading": "每天约三十八筒",
+          "labels": [
+            {
+              "text": "约 38 筒 / 日",
+              "x": 0.5,
+              "y": 0.26,
+              "size": 110,
+              "color": "#CF7135"
+            },
+            {
+              "text": "价格与烘干比例保持不变",
+              "x": 0.5,
+              "y": 0.4,
+              "size": 40,
+              "color": "#263830"
+            },
+            {
+              "text": "20",
+              "x": 0.14,
+              "y": 0.66,
+              "size": 36,
+              "color": "#263830"
+            },
+            {
+              "text": "30",
+              "x": 0.32,
+              "y": 0.66,
+              "size": 36,
+              "color": "#263830"
+            },
+            {
+              "text": "38",
+              "x": 0.464,
+              "y": 0.66,
+              "size": 44,
+              "color": "#CF7135"
+            },
+            {
+              "text": "50",
+              "x": 0.68,
+              "y": 0.66,
+              "size": 36,
+              "color": "#263830"
+            },
+            {
+              "text": "60",
+              "x": 0.86,
+              "y": 0.66,
+              "size": 36,
+              "color": "#263830"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "每天约三十八筒"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "chapter": "一分钟看懂这本账",
+      "text": "这些不是行业均值。真实客流、成交价和房租，才决定你最后剩多少。",
+      "shots": [
+        {
+          "layout": "full",
+          "image": "images/intake.png",
+          "at_seconds": 0,
+          "heading": "强调假设边界",
+          "labels": [
+            {
+              "text": "这是一组假设",
+              "x": 0.25,
+              "y": 0.37,
+              "size": 74,
+              "color": "#263830"
+            },
+            {
+              "text": "不是行业均值",
+              "x": 0.25,
+              "y": 0.53,
+              "size": 48,
+              "color": "#B44B43"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "强调假设边界"
+        },
+        {
+          "layout": "full",
+          "image": "images/storefront.png",
+          "at_seconds": 2.82,
+          "heading": "回到真实门店",
+          "labels": [
+            {
+              "text": "客流 · 成交价 · 房租",
+              "x": 0.5,
+              "y": 0.19,
+              "size": 72,
+              "color": "#263830",
+              "background": "#FEFDF9"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "回到真实门店"
+        },
+        {
+          "layout": "full",
+          "image": "images/ledger.png",
+          "at_seconds": 6.0,
+          "heading": "真实条件决定结果",
+          "labels": [
+            {
+              "text": "最后剩多少",
+              "x": 0.24,
+              "y": 0.37,
+              "size": 88,
+              "color": "#263830"
+            },
+            {
+              "text": "由真实门店条件决定",
+              "x": 0.24,
+              "y": 0.53,
+              "size": 42,
+              "color": "#2F7166"
+            }
+          ],
+          "character_present": false,
+          "core_idea": "真实条件决定结果"
+        }
+      ]
+    }
+  ],
+  "profile": "dense-illustrated-static-v1",
+  "revision": "style-consistency-v2",
+  "status": "visual-trial-awaiting-feedback"
+}

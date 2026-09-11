@@ -1,5 +1,12 @@
 {
-  "status": "technical-checks-passed-awaiting-user-feedback",
+  "status": "user-feedback-style-revision-requested",
+  "user_feedback": {
+    "date": "2026-09-11",
+    "liked": "新版衔接不错",
+    "requested_revision": "中间凸显柯基突兀，人物与其他画面风格也不相同，需要调整感觉",
+    "next_revision": "../laundromat-dense-pilot-v2/",
+    "fully_approved": false
+  },
   "profile": "dense-illustrated-static-v1",
   "seconds": 60.06666666666667,
   "shots": 23,

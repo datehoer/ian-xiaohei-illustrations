@@ -1,0 +1,170 @@
+{
+  "revision": "style-consistency-v2",
+  "style_anchor": "images/empty.png",
+  "generated": [
+    {
+      "id": "empty",
+      "file": "images/empty.png",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: style-transfer. Asset: one 16:9 full-frame editorial illustration for a narrated laundromat economics video. Input image is the scene and composition to simplify. Preserve the room arrangement: teal bench foreground left, glass door left of center, white front-loading machines along right wall, orange control buttons, quiet warm cream wall upper left. Redraw every element in ONE consistent restrained flat 2D line-and-color style: fine slightly irregular dark gray-green contours, broad solid warm ivory, muted sage/teal and terracotta orange fills, only a single pale flat shadow plane. Reduce fine machine detail and vegetation to simple large forms. No gradients, reflections, photographic illumination, glossy metal, wood grain, lens blur, texture or dense hatching. Keep environment convincing and spacious, not an icon slide. Full-bleed scene, no frames or white margins. No people, animals, text, letters, numbers, logos or watermark. Upper left x8–40% y18–48% stays calm light wall for separate captioned data; bottom 14% may have plain floor and bench but no key action. 16:9 landscape.",
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-a6058d3e-920d-4a43-9b15-f28d45d0d0d3.png",
+      "sha256": "46bfb1c0a8515fac90135a8a22b48b2b767b9cb847878f546904f50e74f5904a",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "storefront",
+      "file": "images/storefront.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Exterior establishing wide shot of the same small neighborhood laundromat. Orange awning, dark teal window frames, cream upper facade; through glass a row of the reference's white machines. Restrained simple pavement and two broad foliage shapes. Simplified graphic building planes, no intricate street detail. All important objects inside frame, upper center has quiet cream facade for a later short title. No people or animals.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-0296bb5d-bbeb-43af-afd1-167b84a0692c.png",
+      "sha256": "ce7afb59101fd90705fc49a3087379efc0208a157e81c28e01ec1b977039bd07",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "intake",
+      "file": "images/intake.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Object shot inside the same shop: on the RIGHT half of a folding counter sits a laundry basket containing muted teal and orange clothes, beside an open blank gridded notebook and plain pencil. A cropped white washer door behind it links the basket to washing. LEFT 43% is clear warm ivory wall for editable narration labels, no important object there. No people, animals, hands or floating coins.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-5c9ecfe0-567e-4c52-bd3c-0501da056e62.png",
+      "sha256": "2ecffd2df3c35b3af7b355612f79a0883e01b31fed61289c229a66f59f76cbab",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "cleaning",
+      "file": "images/cleaning.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Wide side view inside the reference shop. Input 2 is CORGI IDENTITY ONLY, never its standalone composition, pose, props or heavier outlines. One small orange/white corgi owner with upright ears, white blaze/muzzle, red collar, white short sleeve collared shirt and charcoal trousers kneels beside a machine on the RIGHT, brushing a removable rectangular lint filter over a small waste bin. Show the task clearly; the character occupies about 28% of frame height, machine and room remain the main scene. Draw corgi in exactly input 1 thin contours and flat colors, no exaggerated fluffy cheeks, no sticker outline, no frontal presenter pose or looking at camera. Only two arms/paws with coherent grip. LEFT 42% is pale calm wall and floor for cost labels. Full room still visible.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png",
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/ian-xiaohei-illustrations/assets/characters/corgi-minimal.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-18ba09e0-57bc-4cac-8525-947ff75a5da2.png",
+      "revision": {
+        "prompt": "Use case: precise-object-edit. Edit this laundromat illustration. Keep the exact room, camera, machines, palette, flat shading and thin gray-green outlines. Change ONLY the scale and position of the working corgi, lint filter and waste bin: move the action one machine further back along the row, so the entire kneeling character including ears fits inside x62–78% and y46–78% of the whole frame (about 30% frame height, clearly smaller than currently). Bin and filter scale down consistently. Keep the same orange/white corgi identity, red collar, white short sleeve shirt, charcoal trousers, two paws brushing lint into the bin. Keep action above bottom 16% subtitle area. Integrate contour thickness with the room, no bold character outline. The left wall/floor remains completely clear for numbers. No new objects, text, people or animals. 16:9 landscape.",
+        "input": "revisions/cleaning-initial.png",
+        "reason": "First result left character too large; moved cleaning action one machine back and reduced its scale.",
+        "initial_original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-0485fc0a-d3de-4cee-9503-42793e1266dc.png"
+      },
+      "sha256": "3f8ff05aa2f2b6d2755f7cb12aef1891f81743b698518bf25021bbdfde2cb0a8",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "busy",
+      "file": "images/busy.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Use the SAME camera position and architecture as input 1. It is now active: two small anthropomorphic corgis in the middle distance, one using a washer on the right, one carrying a basket beside the rear door. Input 2 supplies corgi identity and proportions only; owner wears white shirt, red collar and charcoal trousers; customer wears muted green simple top. Both characters fully visible, no foreground portrait, no one looks at viewer, tallest character under 34% of frame height. Fine contours and flat fills exactly matching the background, minimal facial detail. Keep teal bench foreground clear. Upper center 12–24% is a calm light section of wall for daily-order label.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png",
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/ian-xiaohei-illustrations/assets/characters/corgi-minimal.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-2f9d01c8-9525-42cb-9d4f-32cc78c52b62.png",
+      "sha256": "95b5ea1cf8fe7eefc6381e0a34cecbe62ac3a80b43dbcc20198ac6b6f00b94f0",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "washer",
+      "file": "images/washer.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Large isolated object on RIGHT 54%: the master scene's white front-loading washing machine, dark teal base, dark simple glass circle, orange control knob. Three-quarter view, orange and teal laundry seen through the door as broad simple shapes. Small basket beside it. Flat warm ivory backdrop matching master wall, LEFT 42% clear for price. Absolutely no metallic gloss or detailed drum perforations. No people or animals.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-0a2f8b71-c7ea-4a03-80aa-f16fe763711c.png",
+      "sha256": "4553cf98fe4916b6c4ac37101d778d7647712ef7a50f6ed6e691d7903a73ef88",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "dryer",
+      "file": "images/dryer.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Large isolated object on RIGHT 54%: a companion white front-loading dryer in exactly the master washer's design family, dark teal base and circular glass door, orange control knob, folded muted teal towels visible as simple flat shapes. A short vent tube at rear and two small subtle orange heat strokes make drying clear. Flat warm ivory backdrop; LEFT 42% clear for price. No glossy metal or detailed drum pattern. No people or animals.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-0ea4638f-fcf4-45fa-92a8-5778671001f6.png",
+      "sha256": "015efae50739b8a62a35c3d4323710c114f3d225ee6958e2547ef5d1ecd715f7",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "costs",
+      "file": "images/costs.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. RIGHT half editorial object grouping: a simple water meter and short pipe, one orange detergent bottle and a small blank payment terminal. All in the same fine contour and broad flat teal/orange/ivory shapes as master. Do not use bright yellow lightning or black cartoon icon outlines. Minimal backdrop warm ivory, LEFT 42% clear for editable cost figure. No people, animals, currency numerals, characters, labels or screen text.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-f150f77b-9b54-477c-a233-4ff6ecc11056.png",
+      "sha256": "6ae4d1e789b830715cf3ad55d2d9b02c1099bf0882dba2936af877089f96f84c",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "rent",
+      "file": "images/rent.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Counter within the same laundromat. On RIGHT half, two brass keys rest on one plain cream lease paper and an envelope on a muted wooden-orange counter. Through a small section of shop window behind them see the same white/teal machines. LEFT 43% is uninterrupted warm ivory wall for annual rent figure. Flat color, no wood grain, no gradients. No people, animals or written text.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-ce302167-6e4b-44f2-970d-ccf1e83b68c3.png",
+      "sha256": "239d08981589964fe6fcf3c6b3e67f1bd2d8b8fe65d2ba80da7cf9643b0ac645",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "tools",
+      "file": "images/tools.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. RIGHT half, open muted teal maintenance toolbox containing just a wrench and orange-handled screwdriver, a plain service slip beside a compact tablet displaying three simple muted geometric shapes. Counter implied by a single thin line and pale flat shadow. Fine gray-green contours and calm ivory background matching master. LEFT 42% clear for cost labels. No decorative plants, currency, people, animals or writing.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-9d138661-5a85-4a9d-b23b-cd9f70883cff.png",
+      "sha256": "9e7e684388aaeb5dd47016eaebf257185a9c3d1837dc76da25b7f0ae1f9dbf81",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "wear",
+      "file": "images/wear.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. Across RIGHT 62% show the SAME white/teal washer model twice as a simple comparison: newer on left, aging on right with just a few wear scratches and a worn loose door gasket near its base. Both use master scene's orange knob and teal base. One simple muted orange curved arrow above from newer to aging. No sparkles, 3D or glossy metal. Background warm ivory; LEFT 30% and x5–43% y18–44% remain quiet for a depreciation label. No people, animals or text.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-7d078e87-a28b-4136-a489-71538d4a1f48.png",
+      "sha256": "0c1625b14c8b35a1ce0968424c25b689a863c4dca5482bafcd8ebeb7577da58a",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    },
+    {
+      "id": "ledger",
+      "file": "images/ledger.png",
+      "prompt": "Use case: illustration-story. Make ONE standalone 16:9 landscape frame for a Chinese narrated laundromat business explainer. Input 1 is the MASTER VISUAL STYLE AND SHOP DESIGN reference. Match its thin dark gray-green contours, simple solid warm ivory, muted teal/sage and orange shapes, sparse details and calm flat shadows exactly. Same drawing hand and machine model throughout. Simple flat 2D editorial illustration. No glossy reflections, gradient shading, realistic lighting, dense texture, 3D, watercolor or manga effects. No text, letters, digits, signage, logos or watermark anywhere. Full-frame illustration with no outer margin or panels. Bottom 14% may continue background but keep focal actions above it. A bookkeeping still life on RIGHT half of the same shop's counter. Open blank accounting notebook with a few simple ruled rows, a small dark teal calculator with blank screen and blank keys, and three plain expense slips tucked underneath. In the far RIGHT background a narrow recognizable washer door and teal wall connect the paperwork to the business. Focus on the ledger's final empty row, not physical cash. LEFT 43% is calm warm ivory wall for editable annual pretax profit or conclusion. Fine contour and flat fills matching master. No person, animal, hands, coins, currency, printed text or digits.",
+      "tool": "built-in image_gen",
+      "references": [
+        "/Volumes/MachineU1/github_work/ian-xiaohei-illustrations/examples/video/laundromat-dense-pilot-v2/images/empty.png"
+      ],
+      "original": "/Users/datehoer/.codex/generated_images/01a08fca-fd86-7101-93d4-2e3a353bdb5e/exec-2768ef9c-f152-4edb-9f1b-2828554ccadb.png",
+      "sha256": "c5cbb6ecb825b3e1d9abe72472000dba64420690ee4d8f19c943e7b6585a407e",
+      "visual_qa": "Viewed final generated image: coherent warm ivory/teal/orange flat editorial family, correct main subject and label space, no generated business figures; characters only in busy/cleaning scenes."
+    }
+  ],
+  "native_diagrams": {
+    "generator": "author.py",
+    "files": [
+      "images/attach.png",
+      "images/contribution.png",
+      "images/calendar.png",
+      "images/income.png",
+      "images/year.png",
+      "images/loss.png",
+      "images/threshold.png"
+    ]
+  },
+  "status": "final-assets-reviewed",
+  "final_generated_assets": 12,
+  "generation_calls_including_revision": 13
+}

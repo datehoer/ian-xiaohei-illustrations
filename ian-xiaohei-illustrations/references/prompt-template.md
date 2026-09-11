@@ -10,6 +10,7 @@ Generate one standalone illustration for a Chinese narrated explainer.
 Reference roles:
 {Identify each supplied image as character reference, style reference, composition reference or edit target.}
 Preserve the selected character's identity and the selected linework.
+{When the episode has its own selected style anchor, use that for linework, shading and detail density; use the character reference for identity only.}
 The reference's props, text, pose and scene are not part of its identity.
 {If no character appears in this shot, omit the character reference and identity instructions.}
 

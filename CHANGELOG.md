@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added a separate style-consistency revision of the dense illustration pilot: shared scene references, characters performing shop tasks, and adjacent-shot visual QA while preserving the previously liked cut timing.
 - Added an opt-in dense static-illustration trial profile with more object/environment shots, purposeful character appearances, full-frame composition and measured narration cut points; kept the approved laundromat baseline separate.
 - Captured the user-approved static narrated-video workflow in the existing skills, including shared short/long research, independent Simplified Chinese typography, narration checks, and episode source preservation.
 - Made video page labels and ASR vocabulary configurable per episode, and new audio timelines portable across project locations; retained compatibility with existing absolute paths.

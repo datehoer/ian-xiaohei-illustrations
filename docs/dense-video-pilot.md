@@ -2,7 +2,22 @@
 
 本次试验沿用洗烘店短版的原稿、账本、旁白和字幕，仅改变图片、版式和切镜。60.07 秒、23 镜，使用 12 张内置 image_gen 新插画与 7 张程序绘制的数据图解；其中 6 镜有人物，17 镜无人物。主角与顾客合并计入人物镜头。一个盈亏平衡图分为两次信息揭示，其余有意复用均在镜头表中记录。
 
-状态为 `visual-trial-awaiting-feedback`。用户同意的是试做方向，还没有确认这支新片的效果。原来的 `corgi-narrated-static-v1` 和 `approved-baseline.json` 保持不变。
+第一版已收到用户反馈：衔接不错，但中途突出的柯基很突兀，而且人物与其他画面的风格不一致。整体仍未验收。原来的 `corgi-narrated-static-v1` 和 `approved-baseline.json` 保持不变。
+
+## 画风统一修订
+
+修订源文件在 `examples/video/laundromat-dense-pilot-v2/`，输出在 `outputs/laundromat-dense-pilot-v2/`。沿用第一版的 23 个切点、原配音、字幕和账本。12 张插画使用同一店内画风参考，统一设备造型、暖白/灰绿/橙色、简化轮廓与阴影；7 张程序图解沿用原有准确比例，背景调整到本片暖白色。
+
+开场与假设边界改为衣篮、笔记本，利润与结尾改为账目静物，去掉四个大幅主持人式人物镜头。只在使用机器和清洁场景保留人物，共 2 镜、4.7 秒。这个比例是本次内容的结果，不作为后续视频配额。原始生成图和针对人物大小的修正记录保存在 `generation-record.json`。
+
+复现修订版：
+
+```bash
+.venv/bin/python examples/video/laundromat-dense-pilot-v2/author.py
+.venv/bin/python scripts/episode_video.py render --editions short --output outputs/laundromat-dense-pilot-v2
+```
+
+成片 `short/video.mp4` 和与上一试片的 `comparison.mp4` 另存。修订版仍待用户判断效果，不能因技术检查通过就替代旧确认版。
 
 ## 查看和复现
 

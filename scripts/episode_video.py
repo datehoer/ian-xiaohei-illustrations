@@ -15,7 +15,7 @@ from pathlib import Path
 import re
 import wave
 
-from mimo_tts import DEFAULT_BASE_URL, DEFAULT_MODEL, DEFAULT_STYLE, make_payload, read_key, synthesize
+from mimo_tts import make_payload, read_key, synthesize, tts_config
 from narrated_video import font_index, font_path, read_audio, run, timestamp
 
 FPS=30
@@ -59,9 +59,9 @@ def wav_seconds(path):
     with wave.open(str(path),'rb') as w:return w.getnframes()/w.getframerate()
 
 def fingerprint(m,b):
-    cfg=m.get('tts',{})
-    payload=make_payload(b['text'],cfg.get('model',DEFAULT_MODEL),cfg.get('voice','白桦'),cfg.get('style',DEFAULT_STYLE))
-    return hashlib.sha256(json.dumps({'base':cfg.get('base_url',DEFAULT_BASE_URL),'payload':payload},ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:24]
+    cfg=tts_config(m.get('tts'))
+    payload=make_payload(b['text'],cfg['model'],cfg['voice'],cfg['style'])
+    return hashlib.sha256(json.dumps({'base':cfg['base_url'],'payload':payload},ensure_ascii=False,sort_keys=True).encode()).hexdigest()[:24]
 
 def prepare(paths, output, offline=False):
     from PIL import ImageFont
@@ -76,8 +76,8 @@ def prepare(paths, output, offline=False):
     if jobs and offline:raise ValueError(f'缺少 {len(jobs)} 段缓存；离线模式未调用接口')
     key=read_key() if jobs else None
     def job(item):
-        target,(m,b)=item;cfg=m.get('tts',{})
-        seconds=synthesize(b['text'],target,key,cfg.get('base_url',DEFAULT_BASE_URL),cfg.get('model',DEFAULT_MODEL),cfg.get('voice','白桦'),cfg.get('style',DEFAULT_STYLE))
+        target,(m,b)=item;cfg=tts_config(m.get('tts'))
+        seconds=synthesize(b['text'],target,key,**cfg)
         print(f"配音 {b['id']} · {seconds:.1f}s",flush=True)
     with ThreadPoolExecutor(max_workers=2) as pool:
         futures=[pool.submit(job,j) for j in jobs.items()]
@@ -225,7 +225,7 @@ def full_typography(m,shot,caption,path):
         if background:
             d.rounded_rectangle((box[0]-18,box[1]-12,box[2]+18,box[3]+12),radius=12,fill=background)
         d.text((x,y),s,font=f,fill=color,anchor=anchor)
-    disclosure=m.get('disclosure','情景测算')
+    disclosure=m.get('disclosure','')
     if disclosure:label(disclosure,70,48,24,'#515D58','lm',(255,255,255,225))
     for item in shot.get('labels',[]):
         label(str(item['text']),round(item['x']*1920),round(item['y']*1080),item.get('size',64),item.get('color','#253230'),item.get('anchor','mm'),item.get('background'))
@@ -248,8 +248,8 @@ def typography(m,b,shot,caption,path,progress):
         size=int(size)
         while maxwidth and d.textlength(str(s),font=ImageFont.truetype(font,size,index=face))>maxwidth and size>18:size-=1
         d.text((x,y),str(s),font=ImageFont.truetype(font,size,index=face),fill=color,anchor=anchor)
-    text(82,40,m.get('series_label','拥有一门生意'),23,gray,maxwidth=1100)
-    text(1838,40,m.get('disclosure','情景测算'),23,gray,'ra')
+    text(82,40,m.get('series_label',''),23,gray,maxwidth=1100)
+    text(1838,40,m.get('disclosure',''),23,gray,'ra')
     text(80,96,shot['heading'],55,maxwidth=1740)
     d.line((82,181,1838,181),fill='#DADED8',width=2)
     text(82,207,b.get('chapter',''),23,orange)
@@ -269,8 +269,8 @@ def typography(m,b,shot,caption,path,progress):
             text(165,y,row['label'],39,color,maxwidth=1000)
             text(1755,y,row['value'],47,color,'ra',maxwidth=660)
             if i<len(rows)-1:d.line((165,y+62,1755,y+62),fill='#E8EBE5',width=1)
-    note=shot.get('note','经营金额为演示假设；非真实门店财报、非全国均值')
-    if shot.get('source'):note=shot['source']+'；适用范围见随片资料'
+    note=shot.get('note','')
+    if shot.get('source'):note=shot['source']
     d.rectangle((0,852,1920,918),fill='white')
     text(82,864,note,23,gray,maxwidth=1750)
     d.rectangle((0,918,1920,1080),fill='white')
@@ -334,7 +334,7 @@ def render(output, edition, workers=3):
     def part_job(index,part):
         start,end,s,b,caption=part;frames=end-start
         overlay=render_dir/f'{index:04d}-text.png';clip=render_dir/f'{index:04d}.mp4';stamp=render_dir/f'{index:04d}.sha'
-        spec={'part':part,'series_label':m.get('series_label'),'disclosure':m.get('disclosure'),'font':font_path(m),'font_index':font_index(m),'renderer':10}
+        spec={'part':part,'series_label':m.get('series_label'),'disclosure':m.get('disclosure'),'font':font_path(m),'font_index':font_index(m),'renderer':11}
         if s.get('image'):spec['image_hash']=hashlib.sha256((root/s['image']).read_bytes()).hexdigest()
         digest=hashlib.sha256(json.dumps(spec,ensure_ascii=False,sort_keys=True).encode()).hexdigest()
         if clip.exists() and stamp.exists() and stamp.read_text()==digest:return clip
@@ -377,7 +377,7 @@ def render(output, edition, workers=3):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('stage',choices=['prepare','align','render']);parser.add_argument('manifests',nargs='*',type=Path)
-    parser.add_argument('--output',type=Path,default=Path('outputs/laundromat-v2'));parser.add_argument('--editions',nargs='+',default=['short','long']);parser.add_argument('--offline',action='store_true');parser.add_argument('--model',default='small');parser.add_argument('--workers',type=int,default=3)
+    parser.add_argument('--output',type=Path,default=Path('outputs/laundromat-v2'));parser.add_argument('--editions',nargs='+',default=['short','long']);parser.add_argument('--offline',action='store_true');parser.add_argument('--model',default=os.environ.get('WHISPER_MODEL','small'));parser.add_argument('--workers',type=int,default=3)
     a=parser.parse_args();out=a.output.resolve();out.mkdir(parents=True,exist_ok=True)
     if a.stage=='prepare':
         if not a.manifests:parser.error('prepare 需要清单路径')

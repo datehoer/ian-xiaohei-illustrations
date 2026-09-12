@@ -20,16 +20,16 @@
 
 每期建立独立目录，例如仓库外的 `../ian-xiaohei-video-projects/examples/video/coffee-shop/`，保存 `short.json`、`long.json`、来源、账本、脚本、分镜、提示词和 `images/`。可参考 [v2 最小清单](../examples/minimal-video/short.json)，长版使用相同结构扩展 blocks。
 
-清单顶层填写 `schema_version: 2`、`edition`、`title`、`series_label`、`disclosure`、`tts` 和 `blocks`；`asr_hint` 只填本期少量领域词。`series_label` 控制左上页眉。`tts` 可指定 voice、style、model、base_url，但不包含 key。每个 block 的 text 是纯口播，shots 记录配图和后期文字。新稿默认省略 `tempo` 和 `audio_edit`，实测后确有需要再设置。
+清单顶层填写 `schema_version: 2`、`edition`、`title`、`tts` 和 `blocks`；`asr_hint` 只填本期少量领域词。正式片默认省略 `series_label`、`disclosure` 和镜头 `note`、`source`；这些可选字段仅在明确需要上屏时填写。`tts` 可指定 voice、style、model、base_url，但不包含 key。每个 block 的 text 是纯口播，shots 记录配图和后期文字。新稿默认省略 `tempo` 和 `audio_edit`，实测后确有需要再设置。
 
 下面命令在本期清单和图片准备好后执行，`coffee-shop` 只是新一期目录示例，不表示已经生成该期内容。依赖安装见 [运行说明](video-v2.md)。
 
 ```bash
-.venv/bin/python scripts/episode_video.py prepare \
+uv run --locked --env-file .env python scripts/episode_video.py prepare \
   ../ian-xiaohei-video-projects/examples/video/coffee-shop/short.json ../ian-xiaohei-video-projects/examples/video/coffee-shop/long.json \
   --output outputs/coffee-shop
-.venv/bin/python scripts/episode_video.py align --model small --output outputs/coffee-shop
-.venv/bin/python scripts/episode_video.py render --output outputs/coffee-shop
+uv run --locked --env-file .env python scripts/episode_video.py align --output outputs/coffee-shop
+uv run --locked --env-file .env python scripts/episode_video.py render --output outputs/coffee-shop
 ```
 
 已经有旁白和字幕时，只改字体、图片、标题或布局，直接运行最后一条。正文或配音变化才重新执行三步。整个制作并非一个命令自动完成事实核查和生图；Skill 组织这些工作，程序负责稳定的音频、字幕和合成。

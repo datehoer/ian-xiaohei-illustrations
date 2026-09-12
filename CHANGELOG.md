@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Removed automatic video page labels and generic disclaimers; formal videos show context labels only when explicitly authored, and old render caches are invalidated.
+
+- Added a uv-managed Python environment and lockfile, documented private New API configuration, shared Whisper models and Linux CJK fonts.
+- Added Grok web research with source evidence; aligned MiMo environment overrides with audio-cache fingerprints and made missing credentials fail promptly in noninteractive runs.
+- Extended font regression checks to Linux Noto Sans CJK SC as well as macOS Heiti.
+
 - 将每期视频材料与输出移出代码仓库；保留最小清单示例，合并重复展示图片，明确独立备份边界。
 
 - Added a separate style-consistency revision of the dense illustration pilot: shared scene references, characters performing shop tasks, and adjacent-shot visual QA while preserving the previously liked cut timing.

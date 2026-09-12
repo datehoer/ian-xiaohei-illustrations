@@ -15,7 +15,7 @@ import shutil
 import subprocess
 import wave
 
-from mimo_tts import DEFAULT_BASE_URL, DEFAULT_MODEL, DEFAULT_STYLE, TtsError, make_payload, read_key, synthesize
+from mimo_tts import TtsError, make_payload, read_key, synthesize, tts_config
 
 
 def run(command, cwd=None):
@@ -100,9 +100,9 @@ def overlay(segment, manifest, output, index, count, font):
     def text(x, y, content, size, color=black, anchor=None):
         draw.text((x, y), str(content), font=ImageFont.truetype(font, size, index=face), fill=color, anchor=anchor)
 
-    text(86, 38, "拥有一门生意 · 账本试算", 23, muted)
+    text(86, 38, manifest.get("series_label", ""), 23, muted)
     text(84, 88, segment.get("heading", manifest["title"]), 56)
-    text(1832, 54, manifest.get("disclosure", "演示假设 · 非行业均值"), 24, muted, "ra")
+    text(1832, 54, manifest.get("disclosure", ""), 24, muted, "ra")
     draw.line((86, 180, 1834, 180), fill="#DDE0DC", width=2)
     x = 1090
     text(x, 253, segment.get("eyebrow", ""), 25, muted)
@@ -161,10 +161,8 @@ def build(manifest_path, output, offline=False):
     cache.mkdir(exist_ok=True)
     render = output / "render"
     render.mkdir(exist_ok=True)
-    tts = manifest.get("tts", {})
-    base_url = tts.get("base_url", os.environ.get("MIMO_BASE_URL", DEFAULT_BASE_URL))
-    model, voice = tts.get("model", DEFAULT_MODEL), tts.get("voice", "白桦")
-    style = tts.get("style", DEFAULT_STYLE)
+    tts = tts_config(manifest.get("tts"))
+    base_url, model, voice, style = (tts[k] for k in ("base_url", "model", "voice", "style"))
     key = None
     timeline, pcm_chunks, srt, clips = [], [], [], []
     total_frames = 0

@@ -4,17 +4,16 @@
 
 ## 最小运行示例
 
-需要 Python、FFmpeg/FFprobe、中文字体，以及 `requirements-video.txt` 中的依赖。首次识别需要下载 Whisper 模型。
+使用 uv 管理 Python 与锁定依赖；还需要 FFmpeg/FFprobe、中文字体和 Whisper 模型。首次配置、密钥加载及共享模型目录见 [运行环境](runtime-setup.md)。
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-video.txt
-.venv/bin/python scripts/episode_video.py prepare examples/minimal-video/short.json --output outputs/minimal-video
-.venv/bin/python scripts/episode_video.py align --model small --output outputs/minimal-video --editions short
-.venv/bin/python scripts/episode_video.py render --output outputs/minimal-video --editions short
+uv sync --locked
+uv run --locked --env-file .env python scripts/episode_video.py prepare examples/minimal-video/short.json --output outputs/minimal-video
+uv run --locked --env-file .env python scripts/episode_video.py align --output outputs/minimal-video --editions short
+uv run --locked --env-file .env python scripts/episode_video.py render --output outputs/minimal-video --editions short
 ```
 
-配音缺少缓存时读取 `MIMO_API_KEY`，否则隐藏输入；密钥不写入项目。配音会调用外部服务。`prepare --offline` 可复用已有缓存，缓存缺失时停止。
+配音缺少缓存时读取 `MIMO_API_KEY`；交互终端可隐藏输入，非交互进程缺失时直接报错。密钥仅放在被忽略的本地配置，不提交到仓库。配音会调用外部服务。`prepare --offline` 可复用已有缓存，缓存缺失时停止。
 
 只修改图片或版式时重新 render；正文、语速或剪辑变化后重新 prepare、align、render。不要继承旧一期的音频剪辑点或固定语速。字体集合按 SC/CN 字体面选择，可用 `font_index` 显式指定。
 

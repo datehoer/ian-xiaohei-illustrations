@@ -9,6 +9,7 @@ import binascii
 import getpass
 import json
 import os
+import sys
 from pathlib import Path
 import urllib.error
 import urllib.parse
@@ -28,6 +29,16 @@ class TtsError(RuntimeError):
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         raise TtsError("API 返回重定向；为避免向其他地址转发密钥，已停止。")
+
+
+def tts_config(config=None):
+    config = config or {}
+    return {
+        "base_url": config.get("base_url") or os.environ.get("MIMO_BASE_URL") or DEFAULT_BASE_URL,
+        "model": config.get("model") or os.environ.get("MIMO_MODEL") or DEFAULT_MODEL,
+        "voice": config.get("voice", "白桦"),
+        "style": config.get("style", DEFAULT_STYLE),
+    }
 
 
 def api_request(base_url, key, route, payload=None):
@@ -87,7 +98,11 @@ def synthesize(text, output, key, base_url=DEFAULT_BASE_URL, model=DEFAULT_MODEL
 
 
 def read_key():
-    key = os.environ.get("MIMO_API_KEY") or getpass.getpass("MiMo API key（隐藏输入）: ")
+    key = os.environ.get("MIMO_API_KEY", "").strip()
+    if not key and not sys.stdin.isatty():
+        raise TtsError("缺少 MIMO_API_KEY；请使用 uv run --env-file .env 加载本地配置。")
+    if not key:
+        key = getpass.getpass("MiMo API key（隐藏输入）: ")
     if not key.strip():
         raise TtsError("缺少 MIMO_API_KEY。")
     return key.strip()
@@ -96,7 +111,7 @@ def read_key():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-url", default=os.environ.get("MIMO_BASE_URL", DEFAULT_BASE_URL))
-    parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--model", default=os.environ.get("MIMO_MODEL", DEFAULT_MODEL))
     parser.add_argument("--voice", default="白桦")
     parser.add_argument("--style", default=DEFAULT_STYLE)
     parser.add_argument("--list-models", action="store_true")

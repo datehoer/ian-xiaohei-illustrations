@@ -5,23 +5,53 @@ import tempfile
 from decimal import Decimal as D
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from episode_video import align_text, caption_chunks, int_chinese, normal, shot_timeline, timeline_path, validate_v2, full_typography
-from narrated_video import font_index
+from episode_video import align_text, caption_chunks, int_chinese, normal, shot_timeline, timeline_path, validate_v2, full_typography, typography
+from narrated_video import font_index, font_path, overlay
+
+HAS_CJK_FONT = any(Path(p).exists() for p in (
+    '/System/Library/Fonts/STHeiti Medium.ttc',
+    '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc',
+))
 
 class EpisodeTests(unittest.TestCase):
+    @unittest.skipUnless(HAS_CJK_FONT, 'requires an installed CJK font collection')
+    def test_context_labels_are_absent_by_default_and_render_when_authored(self):
+        from PIL import Image, ImageChops
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'layer.png'
+            manifest={'title':'内容标题'}
+            shot={'layout':'scene','heading':'内容标题'}
+            for layout in ('scene','full','legacy'):
+                with self.subTest(layout=layout):
+                    if layout=='legacy':
+                        overlay({'text':'正文字幕'},manifest,path,0,1,font_path(manifest))
+                    else:
+                        typography(manifest,{},dict(shot,layout=layout),'正文字幕',path,.5)
+                    with Image.open(path) as im:
+                        self.assertIsNone(im.crop((0,0,1920,80)).getchannel('A').getbbox())
+                        self.assertIsNotNone(im.crop((0,940,1920,1040)).getchannel('A').getbbox())
+                        if layout=='scene':
+                            note=im.crop((0,852,1920,918)).convert('RGB')
+                            self.assertIsNone(ImageChops.difference(note,Image.new('RGB',note.size,'white')).getbbox())
+            typography({'series_label':'栏目','disclosure':'用户要求的说明'},{},dict(shot,note='指定备注'),'正文字幕',path,.5)
+            with Image.open(path) as im:
+                self.assertIsNotNone(im.crop((0,0,1920,80)).getchannel('A').getbbox())
+                note=im.crop((0,852,1920,918)).convert('RGB')
+                self.assertIsNotNone(ImageChops.difference(note,Image.new('RGB',note.size,'white')).getbbox())
+
     def test_portable_timeline_resolves_paths_from_edition_directory(self):
         directory=Path('/restored/project/outputs/coffee-shop/short')
         self.assertEqual(timeline_path('../../../examples/video/coffee-shop/short.json',directory),Path('/restored/project/examples/video/coffee-shop/short.json'))
         self.assertEqual(timeline_path('audio/S01.wav',directory),directory/'audio/S01.wav')
         self.assertEqual(timeline_path('/original/audio.wav',directory),Path('/original/audio.wav'))
 
-    @unittest.skipUnless(Path('/System/Library/Fonts/STHeiti Medium.ttc').exists(), 'macOS font regression')
+    @unittest.skipUnless(HAS_CJK_FONT, 'requires an installed CJK font collection')
     def test_chinese_collection_uses_sc_glyphs_instead_of_tc_default(self):
         from PIL import ImageFont
-        path='/System/Library/Fonts/STHeiti Medium.ttc'
+        path=font_path({})
         chosen=ImageFont.truetype(path,72,index=font_index({'font':path}))
         old=ImageFont.truetype(path,72,index=0)
-        self.assertEqual(chosen.getname()[0],'Heiti SC')
+        self.assertTrue(chosen.getname()[0].endswith(' SC'))
         # Same U+5F84 text produced the wrong regional glyph in the old renderer.
         self.assertNotEqual(bytes(chosen.getmask('径')),bytes(old.getmask('径')))
 
@@ -100,7 +130,7 @@ class EpisodeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             shot_timeline([{'id':'a','start_frame':0,'frames':270,'shots':[{'at_seconds':0},{}]}])
 
-    @unittest.skipUnless(Path('/System/Library/Fonts/STHeiti Medium.ttc').exists(), 'macOS font regression')
+    @unittest.skipUnless(HAS_CJK_FONT, 'requires an installed CJK font collection')
     def test_full_frame_overlay_leaves_artwork_visible_and_rejects_clipped_text(self):
         from PIL import Image
         with tempfile.TemporaryDirectory() as directory:

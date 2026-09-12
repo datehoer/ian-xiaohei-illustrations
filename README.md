@@ -110,6 +110,8 @@ python3 scripts/quick_validate.py .
 
 ## 从口播到视频
 
+运行环境统一使用 uv；首次安装执行 `uv sync --locked`。New API 配音与 Grok 检索令牌、中文字体和共享 Whisper 模型的配置见 [运行环境](docs/runtime-setup.md)。
+
 现已提供 MiMo TTS 与本地视频合成程序，输出 1920×1080、30fps MP4、独立 WAV、SRT 字幕和实测时间轴。图片由配图 Skill 调用内置图像工具生成，再通过显式镜头清单交给合成器。
 
 流程与项目分析见 [docs/video-pipeline.md](docs/video-pipeline.md)。可运行的结构示例是 [最小假设账本示例](examples/minimal-video/manifest.json)，其中数字均为演示假设。
@@ -119,7 +121,7 @@ python3 scripts/quick_validate.py .
 用户已确认的默认方案为 `corgi-narrated-static-v1`：柯基、静态镜头、独立简体字幕与 MiMo 旁白。[复刻与保存说明](docs/video-replication.md) 给出下一期调用方法、目录结构和备份范围；完整制作规则在 Skill 的 [视频制作参考](ian-xiaohei-illustrations/references/video-production.md)。
 
 ```bash
-python3 scripts/narrated_video.py examples/minimal-video/manifest.json --output outputs/laundromat-pilot
+uv run --locked --env-file .env python scripts/narrated_video.py examples/minimal-video/manifest.json --output outputs/laundromat-pilot
 ```
 
 需要 FFmpeg、中文字体和 `requirements-video.txt` 中的 Pillow。密钥通过 `MIMO_API_KEY` 或运行时隐藏输入提供；不要把真实密钥写入清单或代码。已有音频时加 `--offline` 可无网络重做排版。
